@@ -560,7 +560,7 @@ const PRODUCTS = [
   }
 ];
 
-// Render de productos en tarjetas (con Compra por WhatsApp)
+// Render de productos en tarjetas (WhatsApp + Más detalles con modal)
 function renderProducts(){
   const wrap = document.getElementById("gridProducts");
   const empty = document.getElementById("emptyProducts");
@@ -573,8 +573,7 @@ function renderProducts(){
   if(!PRODUCTS.length){ empty.hidden = false; return; }
   empty.hidden = true;
 
-  for(const p of PRODUCTS){
-    // Mensaje que llegará a tu WhatsApp con el título del producto
+  for (const p of PRODUCTS){
     const waText = `Hola Nomadas Tours, me interesa el producto "${p.titulo}" (ID: ${p.id}). ¿Está disponible?`;
     const waLink = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(waText)}`;
 
@@ -595,7 +594,8 @@ function renderProducts(){
         <p class="muted" style="margin:4px 0 0">${escapeHtml(p.descripcion || "")}</p>
         <div class="actions">
           <a class="btn primary" href="${waLink}" target="_blank" rel="noopener">Comprar por WhatsApp</a>
-          <a class="btn" href="${waLink}" target="_blank" rel="noopener">Quiero más info</a>
+         <button class="btn" data-action="detalle-producto" data-id="${p.id}">Más detalles</button>
+
         </div>
       </div>
     `;
@@ -707,6 +707,35 @@ function renderProducts(){
       dlgDesc.textContent = d.descripcion;
       if(typeof dlg.showModal === "function"){ dlg.showModal(); } else { alert(d.titulo + "\n\n" + d.descripcion); }
     });
+
+// Modal para productos (usa el mismo <dialog id="dlg">)
+document.addEventListener("click", (e)=>{
+  const btn = e.target.closest("[data-action='detalle-producto']");
+  if(!btn) return;
+
+  const id = btn.getAttribute("data-id");
+  const p = (typeof PRODUCTS !== "undefined") ? PRODUCTS.find(x=>x.id===id) : null;
+  if(!p) return;
+
+  dlgTitle.textContent = p.titulo;
+  dlgImg.src = p.imagen;
+  dlgImg.alt = `${p.titulo} - ${p.categoria||"Equipo"}`;
+  dlgMeta.textContent = `${p.categoria ? `🧭 ${p.categoria} · ` : ""}💲 $${formatMoney(p.precio)} MXN`;
+  dlgDesc.textContent = p.descripcion || "";
+
+  const WA_PHONE = "529613331461"; // ajusta si usas otro número
+  const waText = `Hola Nomadas Tours, me interesa el producto "${p.titulo}" (ID: ${p.id}). ¿Me das más detalles?`;
+  const waLink = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(waText)}`;
+
+  document.getElementById("dlgBtn").textContent = "Comprar por WhatsApp";
+  document.getElementById("dlgBtn").setAttribute("href", waLink);
+  document.getElementById("dlgBtn2").textContent = "Contactar";
+  document.getElementById("dlgBtn2").setAttribute("href", "#contacto");
+
+  if (typeof dlg.showModal === "function"){ dlg.showModal(); }
+});
+
+    
     document.getElementById("dlgClose").addEventListener("click", ()=> dlg.close());
 
     [q, tag, sort].forEach(el=>el.addEventListener("input", render));
@@ -774,6 +803,7 @@ function renderProducts(){
   </script>
 </body>
 </html>
+
 
 
 
