@@ -560,17 +560,24 @@ const PRODUCTS = [
   }
 ];
 
-// Render de productos en tarjetas
+// Render de productos en tarjetas (con Compra por WhatsApp)
 function renderProducts(){
   const wrap = document.getElementById("gridProducts");
   const empty = document.getElementById("emptyProducts");
   if(!wrap) return;
+
+  // ← Cambia aquí tu número con clave país (52 = México)
+  const WA_PHONE = "529613331461";
 
   wrap.innerHTML = "";
   if(!PRODUCTS.length){ empty.hidden = false; return; }
   empty.hidden = true;
 
   for(const p of PRODUCTS){
+    // Mensaje que llegará a tu WhatsApp con el título del producto
+    const waText = `Hola Nomadas Tours, me interesa el producto "${p.titulo}" (ID: ${p.id}). ¿Está disponible?`;
+    const waLink = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(waText)}`;
+
     const card = document.createElement("article");
     card.className = "card";
     card.innerHTML = `
@@ -587,15 +594,15 @@ function renderProducts(){
         </div>
         <p class="muted" style="margin:4px 0 0">${escapeHtml(p.descripcion || "")}</p>
         <div class="actions">
-          <a class="btn primary" href="#contacto">Comprar</a>
-          <a class="btn" href="#contacto">Quiero más info</a>
+          <a class="btn primary" href="${waLink}" target="_blank" rel="noopener">Comprar por WhatsApp</a>
+          <a class="btn" href="${waLink}" target="_blank" rel="noopener">Quiero más info</a>
         </div>
       </div>
     `;
     wrap.appendChild(card);
   }
 }
-// ===== FIN TIENDA =====
+
 
 
     const $ = sel => document.querySelector(sel);
@@ -767,6 +774,7 @@ function renderProducts(){
   </script>
 </body>
 </html>
+
 
 
 
