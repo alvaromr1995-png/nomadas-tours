@@ -185,9 +185,31 @@
       background:rgba(0,0,0,.45); color:#fff; border:1px solid rgba(255,255,255,.25);
       padding:6px 10px; border-radius:10px;
     }
+
+    /* ===== NUEVO: botón flotante de WhatsApp pequeño ===== */
+    .wa-fab{
+      position:fixed; right:16px; bottom:16px; z-index:70;
+      width:52px; height:52px; border-radius:50%;
+      background:#25D366; display:grid; place-items:center;
+      box-shadow:0 8px 24px rgba(0,0,0,.35);
+      transition: transform .15s ease, filter .15s ease;
+    }
+    .wa-fab:hover{ transform:translateY(-2px); filter:brightness(1.05) }
+    .wa-fab svg{ width:24px; height:24px; color:#fff }
+
+    /* ===== EDITADO: mejoras mobile ===== */
     @media (max-width:700px){
       .banner img{ height:34vh; min-height:200px }
       .banner-texto{ inset:auto 12px 12px 12px; padding:12px 14px }
+
+      .container{ padding:0 14px }
+      .hero{ padding:56px 0 36px }
+      nav ul{ gap:10px; overflow-x:auto; -webkit-overflow-scrolling:touch }
+      .toolbar{ display:grid; grid-template-columns:1fr 1fr; gap:10px }
+      .input,.select{ min-width:0; width:100% }
+      .grid{ grid-template-columns: repeat( auto-fill, minmax(210px, 1fr) ) }
+      .wa-fab{ right:14px; bottom:14px; width:46px; height:46px }
+      .wa-fab svg{ width:22px; height:22px }
     }
   </style>
 </head>
@@ -369,6 +391,15 @@
       </div>
     </div>
   </dialog>
+
+  <!-- ===== NUEVO: Botón flotante de WhatsApp pequeño ===== -->
+  <a class="wa-fab"
+     href="https://wa.me/9613331461?text=Hola%20Nomadas%20Tours,%20quiero%20reservar%20un%20viaje"
+     target="_blank" rel="noopener" aria-label="WhatsApp reservar Nomadas Tours">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M20 3.9A10 10 0 0 0 12 2 10 10 0 0 0 2 12c0 1.8.5 3.5 1.4 4.9L2 22l5.2-1.4A10 10 0 0 0 12 22a10 10 0 0 0 10-10c0-2.7-1.1-5.2-3-7.1zM12 20a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.6-5.4c-.2-.1-1.4-.7-1.6-.8-.2-.1-.3-.1-.5.1s-.6.8-.8 1c-.1.1-.3.1-.5 0a6.4 6.4 0 0 1-1.9-1.2 7.1 7.1 0  0 1-1.3-1.7c-.1-.2 0-.3.1-.4l.3-.4.2-.3c.1-.2.1-.3 0-.5l-.8-1.8c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.7.7-.7 1.8s.8 2.2 1 2.4c.2.3 1.6 2.5 3.9 3.5.5.2.9.3 1.2.4.5.2 1 .2 1.3.1.4-.1 1.4-.5 1.6-1.1.2-.5.2-1 .2-1.1 0-.1-.2-.1-.4-.2z"/>
+    </svg>
+  </a>
 
   <script>
     // ============== DRIVE CONFIG (IDs) ==============
@@ -574,18 +605,17 @@
       const link = document.getElementById('bannerLink');
       const btnX = document.getElementById('bannerClose');
 
-      // Config rápida del banner
       const kDismiss = 'banner-dismissed-at';
       const sevenDays = 7*24*60*60*1000;
       const last = Number(localStorage.getItem(kDismiss) || 0);
       if (Date.now() - last < sevenDays){ sect.classList.add('banner--hidden'); return; }
 
       const url = gdrive(DRIVE.banner, 1600);
-      if (!url){ sect.classList.add('banner--hidden'); return; } // si no hay ID, ocultar
+      if (!url){ sect.classList.add('banner--hidden'); return; }
 
       img.src = url;
       img.alt = "Promoción Nomadas Tours";
-      link.href = "#destinos"; // EDITA si quieres enviar a WhatsApp u otro destino
+      link.href = "#destinos";
       sect.classList.remove('banner--hidden');
 
       btnX.addEventListener('click', (e)=>{
@@ -612,3 +642,4 @@
   </script>
 </body>
 </html>
+
