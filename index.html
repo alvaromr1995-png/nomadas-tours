@@ -289,14 +289,48 @@
         <div id="empty" class="empty" hidden>No encontramos resultados con ese criterio. Prueba limpiar filtros.</div>
       </div>
     </section>
+<section id="calendario">
+  <div class="container">
+    <h2>Calendario</h2>
+    <p class="sub">Cambia entre lista, día o mes.</p>
 
-   <iframe
-  class="calendar-embed"
-  title="Calendario de viajes Nomadas Tours"
-  src="https://calendar.google.com/calendar/embed?src=3aef757278e2553c10237567a64c6c8f16a750947e508b41d3a32e280591be58%40group.calendar.google.com&ctz=America%2FMerida&mode=AGENDA&showTitle=0&showPrint=0&showTabs=0&showCalendars=0"
-  frameborder="0"
-  scrolling="no">
-</iframe>
+    <!-- Controles de vista -->
+    <div class="cal-toolbar" style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px">
+      <button class="btn" data-view="AGENDA">Lista</button>
+      <button class="btn" data-view="DAY">Día</button>
+      <button class="btn" data-view="MONTH">Mes</button>
+    </div>
+
+    <!-- Iframe -->
+    <iframe
+      id="calFrame"
+      class="calendar-embed"
+      title="Calendario de viajes Nomadas Tours"
+      src="https://calendar.google.com/calendar/embed?src=3aef757278e2553c10237567a64c6c8f16a750947e508b41d3a32e280591be58%40group.calendar.google.com&ctz=America%2FMerida&mode=AGENDA&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showDate=1&showNav=1"
+      frameborder="0"
+      scrolling="no">
+    </iframe>
+  </div>
+</section>
+
+<script>
+  // --- Cambia el modo del calendario (Lista / Día / Mes) ---
+  (function(){
+    const CAL_ID = "3aef757278e2553c10237567a64c6c8f16a750947e508b41d3a32e280591be58@group.calendar.google.com";
+    const base = "https://calendar.google.com/calendar/embed";
+    const tz = "America%2FMerida";
+    const common = `src=${encodeURIComponent(CAL_ID)}&ctz=${tz}&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showDate=1&showNav=1`;
+
+    const frame = document.getElementById("calFrame");
+    document.querySelectorAll(".cal-toolbar .btn").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        const view = btn.getAttribute("data-view");   // AGENDA | DAY | MONTH
+        frame.src = `${base}?${common}&mode=${view}`;
+      });
+    });
+  })();
+</script>
+
 
 
     <section id="info">
@@ -637,6 +671,7 @@
   </script>
 </body>
 </html>
+
 
 
 
