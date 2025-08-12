@@ -331,6 +331,18 @@
   })();
 </script>
 
+    <!-- Tienda / Equipo de camping -->
+<section id="tienda">
+  <div class="container">
+    <h2>Equipo de camping</h2>
+    <p class="sub">Chamarras, sandalias, lámparas, casas de campaña y más.</p>
+
+    <!-- Si después quieres filtros como en Destinos, aquí va una toolbar -->
+    <div id="gridProducts" class="grid" aria-live="polite"></div>
+    <div id="emptyProducts" class="empty" hidden>No hay productos publicados por ahora.</div>
+  </div>
+</section>
+
 
 
     <section id="info">
@@ -440,8 +452,16 @@
         kayak: "1hxPaiJ18yNEh7M7VgY_wQMzd3jB4dvdn",
         lacandona: "1OIdptCPkOr9_fC58jTzua9hq1NtioMtR",
         chiflon: "1DPMQxqN172twnZD8kEyk2DXeDmSn_bO7",
-        chichonal: "1l9iNFpuGVh23HOlEf1M_wx023RmQJloI"
+        chichonal: "1l9iNFpuGVh23HOlEf1M_wx023RmQJloI",
+         productos: {
+    chamarra:  "",
+    sandalia:  "",
+    lampara:   "",
+    casa:      ""
+  }
+        
       }
+      
     };
     function gdrive(id, size = 1600){ return id ? `https://drive.google.com/thumbnail?id=${id}&sz=w${size}` : ""; }
 
@@ -502,6 +522,81 @@
         descripcion: "Trekking al cráter del Chichonal. Nivel intermedio, vistas espectaculares."
       }
     ];
+
+    // ===== TIENDA (EDITA AQUÍ) =====
+/** Agrega los IDs de Drive en DRIVE.productos o usa URLs públicas. */
+const PRODUCTS = [
+  {
+    id: "chamarra-pro",
+    titulo: "Chamarra impermeable Pro",
+    categoria: "Ropa",
+    precio: 1490,
+    imagen: gdrive(DRIVE.productos?.chamarra) || "https://images.unsplash.com/photo-1548883354-7622d5436c81?q=80&w=1600&auto=format&fit=crop",
+    descripcion: "Resistente al agua y respirable. Ideal para alta montaña o lluvias intensas."
+  },
+  {
+    id: "sandalia-trekking",
+    titulo: "Sandalias de trekking",
+    categoria: "Calzado",
+    precio: 690,
+    imagen: gdrive(DRIVE.productos?.sandalia) || "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1600&auto=format&fit=crop",
+    descripcion: "Suela adherente y secado rápido para travesías acuáticas."
+  },
+  {
+    id: "lampara-frontal",
+    titulo: "Lámpara frontal 300 lm",
+    categoria: "Iluminación",
+    precio: 520,
+    imagen: gdrive(DRIVE.productos?.lampara) || "https://images.unsplash.com/photo-1504280390368-3971ed4cb998?q=80&w=1600&auto=format&fit=crop",
+    descripcion: "3 modos de luz, batería recargable, IPX4."
+  },
+  {
+    id: "casa-2p",
+    titulo: "Casa de campaña 2P Liviana",
+    categoria: "Refugio",
+    precio: 2790,
+    imagen: gdrive(DRIVE.productos?.casa) || "https://images.unsplash.com/photo-1504280390368-3971ed4cb998?q=80&w=1600&auto=format&fit=crop",
+    descripcion: "Doble techo, varillas de aluminio, 2.3 kg."
+  }
+];
+
+// Render de productos en tarjetas
+function renderProducts(){
+  const wrap = document.getElementById("gridProducts");
+  const empty = document.getElementById("emptyProducts");
+  if(!wrap) return;
+
+  wrap.innerHTML = "";
+  if(!PRODUCTS.length){ empty.hidden = false; return; }
+  empty.hidden = true;
+
+  for(const p of PRODUCTS){
+    const card = document.createElement("article");
+    card.className = "card";
+    card.innerHTML = `
+      <div class="thumb">
+        <img src="${p.imagen}" alt="${escapeHtml(p.titulo)} - ${escapeHtml(p.categoria||'Equipo')}" loading="lazy">
+        <div class="badges">
+          ${p.categoria ? `<span class="badge">#${escapeHtml(p.categoria.toLowerCase())}</span>` : ""}
+        </div>
+      </div>
+      <div class="body">
+        <div class="title">${escapeHtml(p.titulo)}</div>
+        <div class="meta">
+          <span class="price">$${formatMoney(p.precio)} MXN</span>
+        </div>
+        <p class="muted" style="margin:4px 0 0">${escapeHtml(p.descripcion || "")}</p>
+        <div class="actions">
+          <a class="btn primary" href="#contacto">Comprar</a>
+          <a class="btn" href="#contacto">Quiero más info</a>
+        </div>
+      </div>
+    `;
+    wrap.appendChild(card);
+  }
+}
+// ===== FIN TIENDA =====
+
 
     const $ = sel => document.querySelector(sel);
     const grid = $("#grid"), empty = $("#empty");
@@ -665,12 +760,14 @@
       }
       fillTags();
       render();
+      renderProducts();
       document.getElementById("y").textContent = new Date().getFullYear();
     }
     document.addEventListener("DOMContentLoaded", init);
   </script>
 </body>
 </html>
+
 
 
 
