@@ -1,113 +1,117 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- ===== SEO BÁSICO ===== -->
+  <!-- ===== SEO básico ===== -->
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Nomadas Tours | Aventuras, ecoturismo y viajes en Chiapas</title>
-  <meta name="description" content="Nomadas Tours: viajes de aventura y ecoturismo en Chiapas. Destinos como Tacaná, Chiflón y Lacandona. Grupos pequeños, fechas flexibles y atención por WhatsApp." />
-  <link rel="canonical" href="https://nomadastoursmx.github.io/" />
-  <meta name="theme-color" content="#0f172a" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nomadas Tours | Agencia de viajes de aventura en Chiapas</title>
+  <meta name="description" content="Nomadas Tours: Aventuras, ecoturismo y escapadas inolvidables en Chiapas y el sureste. Fechas flexibles, grupos pequeños y experiencias reales." />
+  <link rel="canonical" href="https://tudominio.com/" />
 
-  <!-- ===== SEO SOCIAL (Open Graph / Twitter) ===== -->
-  <meta property="og:title" content="Nomadas Tours | Aventuras y ecoturismo" />
-  <meta property="og:description" content="Explora selvas, montañas y paraísos de Chiapas. Reserva por WhatsApp." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://nomadastoursmx.github.io/" />
-  <meta property="og:image" content="https://i.imgur.com/0h5sB1V.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- ===== ICONO ===== -->
+  <!-- ===== Icono ===== -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧭</text></svg>">
 
+  <!-- ===== Open Graph / Twitter ===== -->
+  <meta property="og:title" content="Nomadas Tours | Agencia de viajes de aventura" />
+  <meta property="og:description" content="Explora selvas, montañas y paraísos escondidos con Nomadas Tours." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tudominio.com/" />
+  <meta property="og:image" content="https://drive.google.com/thumbnail?id=1jQu3saJziLenX8pe8yTouPdXJFMgppll&sz=w1200" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- ===== JSON-LD (Organization + WebSite) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Nomadas Tours",
+    "url":"https://tudominio.com/",
+    "logo":"https://drive.google.com/thumbnail?id=1So1MGQYQVnuFH4OyB1YgdPfhRn-BhI7D&sz=w512",
+    "sameAs":["https://instagram.com/nomadastours_mx","https://facebook.com/nomadastours_mx"]
+  }
+  </script>
+
   <style>
+    /* ===== Tema y base ===== */
     :root{
       --bg:#0f172a; --panel:#111827; --muted:#94a3b8; --text:#e5e7eb;
-      --brand:#22d3ee; --brand-2:#38bdf8; --ok:#22c55e; --warn:#f59e0b; --card:#0b1220;
-      --shadow:0 10px 25px rgba(0,0,0,.35); --radius:16px; --navH:68px;
+      --brand:#22d3ee; --brand-2:#38bdf8; --ok:#22c55e; --warn:#f59e0b; --err:#ef4444;
+      --card:#0b1220; --shadow:0 10px 25px rgba(0,0,0,.35); --radius:16px;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
     body{
       margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,Arial;
-      background:radial-gradient(1200px 600px at 20% -10%, rgba(56,189,248,.15), transparent 60%),
-                 radial-gradient(1000px 500px at 120% 0%, rgba(34,211,238,.12), transparent 55%),
-                 var(--bg);
+      background:
+        radial-gradient(1200px 600px at 20% -10%, rgba(56,189,248,.15), transparent 60%),
+        radial-gradient(1000px 500px at 120% 0%, rgba(34,211,238,.12), transparent 55%),
+        var(--bg);
       color:var(--text); line-height:1.55; position:relative; overflow-x:hidden;
     }
     body::before{
       content:""; position:fixed; inset:0; pointer-events:none; z-index:0;
-      background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600"><defs><pattern id="p" width="120" height="120" patternUnits="userSpaceOnUse"><path d="M0 60Q30 40 60 60T120 60M0 0Q40 20 80 0M0 120Q40 100 80 120" fill="none" stroke="rgba(255,255,255,.05)" stroke-width="1"/><path d="M0 30Q30 10 60 30T120 30M0 90Q30 110 60 90T120 90" fill="none" stroke="rgba(255,255,255,.04)" stroke-width="1"/></pattern></defs><rect width="600" height="600" fill="url(%23p)"/></svg>');
+      background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600"><defs><pattern id="contours" width="120" height="120" patternUnits="userSpaceOnUse"><path d="M 0 60 Q 30 40 60 60 T 120 60 M 0 0 Q 40 20 80 0 M 0 120 Q 40 100 80 120" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/><path d="M 0 30 Q 30 10 60 30 T 120 30 M 0 90 Q 30 110 60 90 T 120 90" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/></pattern></defs><rect width="600" height="600" fill="url(%23contours)"/></svg>');
       background-size:600px 600px; mix-blend-mode:overlay; opacity:.6;
     }
-    a{color:var(--brand); text-decoration:none} a:hover{color:var(--brand-2)}
+    a{color:var(--brand); text-decoration:none}
+    a:hover{color:var(--brand-2)}
     .container{max-width:1140px; margin:0 auto; padding:0 20px}
 
-    /* ===== HEADER + NAV ===== */
+    /* ===== Header sticky ===== */
     header{
-      position:sticky; top:0; backdrop-filter:blur(10px);
-      background:rgba(15,23,42,.65); border-bottom:1px solid rgba(255,255,255,.06); z-index:50;
+      position:sticky; top:0; z-index:60; backdrop-filter:blur(10px);
+      background:rgba(15,23,42,.65); border-bottom:1px solid rgba(255,255,255,.06);
     }
-    .nav{display:flex; align-items:center; justify-content:space-between; min-height:var(--navH);}
+    .nav{display:flex; align-items:center; justify-content:space-between; min-height:66px; gap:10px}
     .logo{display:flex; gap:12px; align-items:center; font-weight:800; letter-spacing:.3px}
-    .logo-badge{width:40px; height:40px; border-radius:12px; display:grid; place-items:center; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#00111a; font-weight:900; box-shadow:var(--shadow);}
-    .logo-plate{display:grid; place-items:center; padding:6px 10px; border-radius:12px; background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); box-shadow:0 8px 24px rgba(34,211,238,.15), inset 0 0 0 1px rgba(255,255,255,.05);}
-    .logo-img{height:56px; width:auto; display:none; filter:drop-shadow(0 4px 16px rgba(34,211,238,.35));}
-    nav ul{display:flex; gap:18px; list-style:none; padding:0; margin:0}
-    nav a{padding:10px 12px; border-radius:10px; color:var(--text)}
-    nav a:hover{background:rgba(255,255,255,.06)}
+    .logo-badge{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#00111a;font-weight:900;box-shadow:var(--shadow)}
+    .logo-plate{display:grid;place-items:center;padding:6px 10px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);box-shadow:0 8px 24px rgba(34,211,238,.15), inset 0 0 0 1px rgba(255,255,255,.05)}
+    .logo-img{height:56px;width:auto;display:none;filter:drop-shadow(0 4px 16px rgba(34,211,238,.35))}
+    @media (max-width:820px){ .logo-img{height:44px} .logo-badge{display:none} }
+
+    /* ===== NUEVO: Header con menú hamburguesa en móvil ===== */
+    .hamburger{display:none;background:transparent;border:1px solid rgba(255,255,255,.18);color:var(--text);border-radius:10px;padding:8px 10px;cursor:pointer}
+    .hamburger svg{width:20px;height:20px}
+    nav#navMenu{display:flex;align-items:center}
+    nav#navMenu ul{display:flex; gap:18px; list-style:none; padding:0; margin:0}
+    nav#navMenu a{padding:10px 12px; border-radius:10px; color:var(--text)}
+    nav#navMenu a:hover{background:rgba(255,255,255,.06)}
     .socials{display:flex; align-items:center; gap:10px; margin-left:16px}
     .socials a{display:grid; place-items:center; width:36px; height:36px; border-radius:10px; color:var(--text); border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04)}
     .socials a:hover{background:rgba(255,255,255,.08)}
-    .socials svg{width:18px; height:18px}
+    .socials svg{width:18px;height:18px}
 
-    /* ===== NUEVO: Header con menú hamburguesa en móvil ===== */
-    .menu-toggle{
-      display:none; gap:8px; align-items:center; justify-content:center;
-      width:44px; height:44px; border-radius:12px; border:1px solid rgba(255,255,255,.12);
-      background:rgba(255,255,255,.04); color:var(--text);
-    }
-    .menu-toggle svg{width:22px; height:22px}
-    @media (max-width:860px){
-      .menu-toggle{display:flex}
-      .nav-right{display:flex; align-items:center; gap:10px}
-      nav{
-        position:fixed; left:0; right:0;
-        top:calc(var(--navH) + env(safe-area-inset-top));
-        background:rgba(15,23,42,.98); backdrop-filter:blur(8px);
-        transform:translateY(-120%); transition:transform .25s ease;
-        border-bottom:1px solid rgba(255,255,255,.08); z-index:1000;
-        max-height:calc(100vh - var(--navH) - env(safe-area-inset-top));
-        overflow:auto; -webkit-overflow-scrolling:touch;
+    @media (max-width:820px){
+      .hamburger{display:block}
+      nav#navMenu{
+        position:absolute; left:0; right:0; top:66px;
+        background:rgba(15,23,42,.95); border-top:1px solid rgba(255,255,255,.08);
+        max-height:0; overflow:hidden; transition:max-height .25s ease;
       }
-      nav.open{transform:translateY(0)}
-      nav ul{flex-direction:column; gap:2px; padding:12px}
-      nav a{display:block; padding:12px 14px}
-      .socials{display:none}
-      .logo-img{height:44px}
-      .logo-badge{display:none}
+      nav#navMenu.open{max-height:260px}
+      nav#navMenu ul{flex-direction:column; gap:6px; padding:10px}
+      .socials{margin-left:0}
     }
-    body.menu-open{overflow:hidden}
 
-    /* ===== HERO ===== */
+    /* ===== Hero ===== */
     .hero{padding:72px 0 56px; text-align:center; position:relative; z-index:1;}
     .hero h1{font-size:clamp(28px,4vw,44px); margin:0 0 10px}
     .hero p{color:var(--muted); margin:0 0 22px}
-    .cta{display:inline-flex; gap:10px; align-items:center; padding:12px 18px; border-radius:12px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#06202b; font-weight:700; box-shadow:var(--shadow);}
+    .cta{display:inline-flex; gap:10px; align-items:center; padding:12px 18px; border-radius:12px; background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#06202b; font-weight:700; box-shadow:var(--shadow)}
     .cta:hover{filter:brightness(1.05)}
     .ridge{position:absolute; left:0; right:0; bottom:-1px; height:110px; z-index:0; pointer-events:none;
       background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,80 L120,70 L220,90 L340,65 L480,90 L600,60 L740,85 L860,70 L980,88 L1200,70 L1200,120 L0,120 Z" fill="rgba(34,211,238,0.10)"/><path d="M0,85 L130,75 L260,95 L380,70 L520,95 L640,65 L780,90 L900,75 L1020,92 L1200,75 L1200,120 L0,120 Z" fill="rgba(56,189,248,0.10)"/></svg>');
       background-size:100% 100%; filter:drop-shadow(0 -6px 16px rgba(0,0,0,.25));
     }
 
-    /* ===== SECCIONES Y TARJETAS ===== */
+    /* ===== Secciones y tarjetas ===== */
     section{padding:48px 0}
     section h2{font-size:clamp(22px,3vw,32px); margin:0 0 18px}
     .sub{color:var(--muted); margin-top:-6px; margin-bottom:24px}
     .toolbar{display:flex; gap:12px; flex-wrap:wrap; margin-bottom:18px}
-    .input,.select{background:#0b1220; color:var(--text); border:1px solid rgba(255,255,255,.08); padding:10px 12px; border-radius:10px; outline:none; min-width:220px;}
-    .grid{display:grid; gap:18px; grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,.02), transparent 30%), var(--card); border:1px solid rgba(255,255,255,.07); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); display:flex; flex-direction:column;}
+    .input,.select{background:#0b1220;color:var(--text);border:1px solid rgba(255,255,255,.08);padding:10px 12px;border-radius:10px;outline:none;min-width:220px}
+    .grid{display:grid; gap:18px; grid-template-columns:repeat(auto-fill, minmax(260px,1fr))}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,.02), transparent 30%), var(--card); border:1px solid rgba(255,255,255,.07); border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); display:flex; flex-direction:column}
     .thumb{aspect-ratio:16/10; background:#0d1b2a; position:relative; overflow:hidden}
     .thumb img{width:100%; height:100%; object-fit:cover; display:block; transition:transform .45s ease}
     .card:hover .thumb img{transform:scale(1.05)}
@@ -122,68 +126,77 @@
     .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#06161f; border:none; font-weight:800}
     .empty{opacity:.7; border:1px dashed rgba(255,255,255,.2); border-radius:12px; padding:18px; text-align:center}
 
-    /* ===== CALENDARIO ===== */
+    /* ===== Calendario (iframe) ===== */
     .calendar-embed{width:100%; height:650px; border:1px solid rgba(255,255,255,.1); border-radius:var(--radius); overflow:hidden}
 
-    /* ===== PANELES Y FORMULARIO ===== */
+    /* ===== Paneles / formularios ===== */
     .panel{background:var(--panel); border:1px solid rgba(255,255,255,.06); border-radius:var(--radius); padding:18px}
     .list{display:grid; gap:10px; padding-left:18px}
     form{display:grid; gap:12px}
     label{font-weight:600}
-    input[type="text"], input[type="email"], textarea{background:#0b1220; color:var(--text); border:1px solid rgba(255,255,255,.08); padding:12px 12px; border-radius:10px; outline:none;}
+    input[type="text"],input[type="email"],textarea{background:#0b1220;color:var(--text);border:1px solid rgba(255,255,255,.08);padding:12px 12px;border-radius:10px;outline:none}
     textarea{min-height:140px; resize:vertical}
     .row{display:grid; gap:12px; grid-template-columns:1fr 1fr}
     @media (max-width:700px){ .row{grid-template-columns:1fr} }
 
-    /* ===== FOOTER ===== */
+    /* ===== Footer ===== */
     footer{padding:26px 0 40px; color:var(--muted); text-align:center}
     .footer-socials{display:flex; justify-content:center; gap:14px; margin-top:10px}
-    .footer-socials a{display:inline-grid; place-items:center; width:38px; height:38px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04); color:var(--text)}
+    .footer-socials a{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:var(--text)}
     .footer-socials a:hover{background:rgba(255,255,255,.08)}
 
-    /* ===== DIALOGO (MODAL) ===== */
-    dialog{border:none; border-radius:18px; padding:0; width:min(820px, 92vw); background:var(--panel); color:var(--text); box-shadow:var(--shadow); overflow:hidden}
+    /* ===== Modal (dialog) ===== */
+    dialog{border:none;border-radius:18px;padding:0;width:min(820px,92vw);background:var(--panel);color:var(--text);box-shadow:var(--shadow);overflow:hidden}
     dialog::backdrop{background:rgba(0,0,0,.6)}
-    .dlg-head{padding:14px 16px; border-bottom:1px solid rgba(255,255,255,.07); display:flex; align-items:center; justify-content:space-between}
+    .dlg-head{padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between}
     .dlg-body{padding:16px; display:grid; gap:12px}
-    .x{background:transparent; color:var(--text); border:1px solid rgba(255,255,255,.15); padding:6px 10px; border-radius:8px; cursor:pointer}
-    .dlg-hero{aspect-ratio:16/9; border-radius:14px; overflow:hidden}
+    .x{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.15);padding:6px 10px;border-radius:8px;cursor:pointer}
+    .dlg-hero{aspect-ratio:16/9;border-radius:14px;overflow:hidden}
     .muted{color:var(--muted)}
 
-    /* ===== Banner (imagen de Drive) ===== */
-    .banner{position:relative; width:100%; overflow:hidden; border-bottom:3px solid var(--brand); background:#0b1220;}
+    /* ===== Banner (Drive) ===== */
+    .banner{position:relative;width:100%;overflow:hidden;border-bottom:3px solid var(--brand);background:#0b1220}
     .banner--hidden{display:none}
-    .banner-link{display:block; position:relative; text-decoration:none; color:inherit}
-    .banner img{width:100%; height:46vh; min-height:240px; max-height:520px; object-fit:cover; display:block; filter:saturate(1.05) contrast(1.05);}
-    .banner-texto{position:absolute; inset:auto 20px 20px 20px; background:rgba(0,0,0,.55); padding:16px 20px; border-radius:12px; color:#fff; max-width:min(720px, 92vw); box-shadow:var(--shadow);}
-    .banner-texto h2{margin:0; font-size:clamp(20px, 4vw, 32px)}
-    .banner-texto p{margin:6px 0 0; font-size:clamp(14px, 2vw, 18px); color:#e5e7eb}
-    .banner .x{position:absolute; top:12px; right:12px; z-index:2; cursor:pointer; background:rgba(0,0,0,.45); color:#fff; border:1px solid rgba(255,255,255,.25); padding:6px 10px; border-radius:10px;}
+    .banner-link{display:block;position:relative;text-decoration:none;color:inherit}
+    .banner img{width:100%;height:46vh;min-height:240px;max-height:520px;object-fit:cover;display:block;filter:saturate(1.05) contrast(1.05)}
+    .banner-texto{position:absolute;inset:auto 20px 20px 20px;background:rgba(0,0,0,.55);padding:16px 20px;border-radius:12px;color:#fff;max-width:min(720px,92vw);box-shadow:var(--shadow)}
+    .banner-texto h2{margin:0;font-size:clamp(20px,4vw,32px)}
+    .banner-texto p{margin:6px 0 0;font-size:clamp(14px,2vw,18px);color:#e5e7eb}
+    .banner .x{position:absolute;top:12px;right:12px;z-index:2;cursor:pointer;background:rgba(0,0,0,.45);color:#fff;border:1px solid rgba(255,255,255,.25);padding:6px 10px;border-radius:10px}
+
+    /* ===== NUEVO: botón flotante de WhatsApp pequeño ===== */
+    .wa-fab{
+      position:fixed; right:16px; bottom:16px; z-index:70;
+      width:52px;height:52px;border-radius:50%; background:#25D366; display:grid; place-items:center;
+      box-shadow:0 8px 24px rgba(0,0,0,.35); transition:transform .15s ease, filter .15s ease;
+    }
+    .wa-fab:hover{ transform:translateY(-2px); filter:brightness(1.05) }
+    .wa-fab svg{ width:24px; height:24px; color:#fff }
+
+    /* ===== NUEVO: Testimonios ===== */
+    .t-grid{display:grid; gap:16px; grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
+    .t-card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px;box-shadow:var(--shadow)}
+    .t-head{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+    .t-avatar{width:42px;height:42px;border-radius:50%;object-fit:cover}
+    .t-name{font-weight:700}
+    .t-stars{color:#fde68a}
+
+    /* ===== Mejoras mobile ===== */
     @media (max-width:700px){
-      .banner img{height:34vh; min-height:200px}
+      .banner img{height:34vh;min-height:200px}
       .banner-texto{inset:auto 12px 12px 12px; padding:12px 14px}
       .container{padding:0 14px}
       .hero{padding:56px 0 36px}
-      .toolbar{display:grid; grid-template-columns:1fr 1fr; gap:10px}
-      .input,.select{min-width:0; width:100%}
-      .grid{grid-template-columns:repeat(auto-fill, minmax(210px, 1fr))}
+      .toolbar{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+      .input,.select{min-width:0;width:100%}
+      .grid{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}
+      .wa-fab{right:14px;bottom:14px;width:46px;height:46px}
+      .wa-fab svg{width:22px;height:22px}
     }
-
-    /* ===== NUEVO: botón flotante de WhatsApp pequeño ===== */
-    .wa-fab{position:fixed; right:16px; bottom:16px; z-index:70; width:52px; height:52px; border-radius:50%; background:#25D366; display:grid; place-items:center; box-shadow:0 8px 24px rgba(0,0,0,.35); transition:transform .15s ease, filter .15s ease;}
-    .wa-fab:hover{transform:translateY(-2px); filter:brightness(1.05)}
-    .wa-fab svg{width:24px; height:24px; color:#fff}
-    @media (max-width:700px){ .wa-fab{right:14px; bottom:14px; width:46px; height:46px} .wa-fab svg{width:22px; height:22px} }
-
-    /* ===== NUEVO: Testimonios (carrusel simple) ===== */
-    .testi{display:grid; gap:16px}
-    .testi-list{display:flex; gap:14px; overflow:auto; scroll-snap-type:x mandatory; padding-bottom:8px}
-    .testi-card{min-width:280px; flex:0 0 auto; scroll-snap-align:start; background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:16px; padding:16px; box-shadow:var(--shadow)}
-    .stars{color:#fbbf24; letter-spacing:1px}
   </style>
 </head>
 <body>
-  <!-- ===== HEADER con logo + menú ===== -->
+  <!-- ===== Header con logo + menú hamburguesa ===== -->
   <header>
     <div class="container nav" role="navigation" aria-label="Principal">
       <div class="logo">
@@ -192,35 +205,32 @@
         <div>Nomadas Tours</div>
       </div>
 
-      <div class="nav-right">
-        <button id="menuToggle" class="menu-toggle" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-        </button>
+      <button id="navToggle" class="hamburger" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
 
-        <nav id="mainNav" aria-label="Secciones">
-          <ul>
-            <li><a href="#destinos">Destinos</a></li>
-            <li><a href="#calendario">Calendario</a></li>
-            <li><a href="#tienda">Tienda</a></li>
-            <li><a href="#testimonios">Testimonios</a></li>
-            <li><a href="#info">Información</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </ul>
-        </nav>
-
+      <nav id="navMenu" aria-label="Secciones">
+        <ul>
+          <li><a href="#destinos">Destinos</a></li>
+          <li><a href="#calendario">Calendario</a></li>
+          <li><a href="#tienda">Tienda</a></li>
+          <li><a href="#info">Información</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
         <div class="socials" aria-label="Redes sociales">
           <a href="https://instagram.com/nomadastours_mx" target="_blank" rel="noopener" aria-label="Instagram @nomadastours_mx">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3a5 5 0 110 10 5 5 0 010-10zm0 2.2a2.8 2.8 0 100 5.6 2.8 2.8 0 000-5.6zm6.2-.9a1.1 1.1 0 110 2.2 1.1 1.1 0 010-2.2z"/></svg>
           </a>
-          <a href="https://www.facebook.com/profile.php?id=61572760475244" target="_blank" rel="noopener" aria-label="Facebook Nomadas Tours">
+          <a href="https://facebook.com/nomadastours_mx" target="_blank" rel="noopener" aria-label="Facebook @nomadastours_mx">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 9H16l.5-3h-3V4.5c0-.8.2-1.3 1.3-1.3H16V0h-2.2C11.7 0 10 1.6 10 4.4V6H7v3h3v12h3.5V9z"/></svg>
           </a>
         </div>
-      </div>
+      </nav>
     </div>
   </header>
 
-  <!-- ===== Banner (Drive) ===== -->
+  <!-- ===== Banner destacado (imagen desde Drive) ===== -->
   <section id="promoBanner" class="banner banner--hidden" role="region" aria-label="Promoción destacada">
     <button class="x" id="bannerClose" aria-label="Cerrar anuncio">Cerrar</button>
     <a id="bannerLink" class="banner-link" href="#destinos">
@@ -232,142 +242,174 @@
     </a>
   </section>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="container">
-      <h1>Aventuras auténticas con <span style="background:linear-gradient(135deg,var(--brand),var(--brand-2)); -webkit-background-clip:text; background-clip:text; color:transparent;">Nomadas Tours</span></h1>
-      <p>Explora selvas, montañas y paraísos escondidos. Fechas flexibles, grupos pequeños y experiencias reales.</p>
-      <a class="cta" href="#destinos" aria-label="Ver destinos disponibles">Ver destinos disponibles →</a>
-    </div>
-    <div class="ridge" aria-hidden="true"></div>
-  </section>
-
-  <!-- ===== DESTINOS ===== -->
-  <section id="destinos">
-    <div class="container">
-      <h2>Destinos</h2>
-      <p class="sub">Publica, filtra y actualiza tus experiencias en minutos.</p>
-
-      <div class="toolbar" role="search">
-        <input id="q" class="input" type="search" placeholder="Buscar destino, lugar o etiqueta…" aria-label="Buscar" />
-        <select id="tag" class="select" aria-label="Filtrar por etiqueta">
-          <option value="">Todas las etiquetas</option>
-        </select>
-        <select id="sort" class="select" aria-label="Ordenar">
-          <option value="recent">Más recientes</option>
-          <option value="price-asc">Precio: menor a mayor</option>
-          <option value="price-desc">Precio: mayor a menor</option>
-          <option value="duration-asc">Duración: corta a larga</option>
-          <option value="duration-desc">Duración: larga a corta</option>
-        </select>
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container">
+        <h1>Aventuras auténticas con <span style="background:linear-gradient(135deg,var(--brand),var(--brand-2)); -webkit-background-clip:text; background-clip:text; color:transparent;">Nomadas Tours</span></h1>
+        <p>Explora selvas, montañas y paraísos escondidos. Fechas flexibles, grupos pequeños y experiencias reales.</p>
+        <a class="cta" href="#destinos" aria-label="Ver destinos disponibles">Ver destinos disponibles →</a>
       </div>
+      <div class="ridge" aria-hidden="true"></div>
+    </section>
 
-      <div id="grid" class="grid" aria-live="polite"></div>
-      <div id="empty" class="empty" hidden>No encontramos resultados con ese criterio. Prueba limpiar filtros.</div>
-    </div>
-  </section>
+    <!-- ===== Destinos ===== -->
+    <section id="destinos">
+      <div class="container">
+        <h2>Destinos</h2>
+        <p class="sub">Publica, filtra y actualiza tus experiencias en minutos.</p>
 
-  <!-- ===== CALENDARIO ===== -->
-  <section id="calendario">
-    <div class="container">
-      <h2>Calendario</h2>
-      <p class="sub">Cambia entre lista, día o mes.</p>
+        <div class="toolbar" role="search">
+          <input id="q" class="input" type="search" placeholder="Buscar destino, lugar o etiqueta…" aria-label="Buscar" />
+          <select id="tag" class="select" aria-label="Filtrar por etiqueta">
+            <option value="">Todas las etiquetas</option>
+          </select>
+          <select id="sort" class="select" aria-label="Ordenar">
+            <option value="recent">Más recientes</option>
+            <option value="price-asc">Precio: menor a mayor</option>
+            <option value="price-desc">Precio: mayor a menor</option>
+            <option value="duration-asc">Duración: corta a larga</option>
+            <option value="duration-desc">Duración: larga a corta</option>
+          </select>
+        </div>
 
-      <div class="cal-toolbar" style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px">
-        <button class="btn" data-view="AGENDA">Lista</button>
-        <button class="btn" data-view="DAY">Día</button>
-        <button class="btn" data-view="MONTH">Mes</button>
+        <div id="grid" class="grid" aria-live="polite"></div>
+        <div id="empty" class="empty" hidden>No encontramos resultados con ese criterio. Prueba limpiar filtros.</div>
       </div>
+    </section>
 
-      <iframe
-        id="calFrame"
-        class="calendar-embed"
-        title="Calendario de viajes Nomadas Tours"
-        src="https://calendar.google.com/calendar/embed?src=3aef757278e2553c10237567a64c6c8f16a750947e508b41d3a32e280591be58%40group.calendar.google.com&ctz=America%2FMerida&mode=AGENDA&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showDate=1&showNav=1"
-        frameborder="0"
-        scrolling="no"></iframe>
-    </div>
-  </section>
+    <!-- ===== Calendario ===== -->
+    <section id="calendario">
+      <div class="container">
+        <h2>Calendario</h2>
+        <p class="sub">Cambia entre lista, día o mes.</p>
 
-  <!-- ===== TIENDA / EQUIPO ===== -->
-  <section id="tienda">
-    <div class="container">
-      <h2>Equipo de camping</h2>
-      <p class="sub">Chamarras, sandalias, lámparas, casas de campaña y más.</p>
-      <div id="gridProducts" class="grid" aria-live="polite"></div>
-      <div id="emptyProducts" class="empty" hidden>No hay productos publicados por ahora.</div>
-    </div>
-  </section>
+        <div class="cal-toolbar" style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px">
+          <button class="btn" data-view="AGENDA">Lista</button>
+          <button class="btn" data-view="DAY">Día</button>
+          <button class="btn" data-view="MONTH">Mes</button>
+        </div>
 
-  <!-- ===== NUEVO: TESTIMONIOS ===== -->
-  <section id="testimonios" aria-labelledby="tTitle">
-    <div class="container testi">
-      <h2 id="tTitle">Testimonios</h2>
-      <p class="sub">Lo que dicen nuestros viajeros.</p>
-      <div class="testi-list" id="testiList">
-        <!-- Se llena por JS -->
+        <iframe
+          id="calFrame"
+          class="calendar-embed"
+          title="Calendario de viajes Nomadas Tours"
+          src="https://calendar.google.com/calendar/embed?src=3aef757278e2553c10237567a64c6c8f16a750947e508b41d3a32e280591be58%40group.calendar.google.com&ctz=America%2FMerida&mode=AGENDA&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showDate=1&showNav=1"
+          frameborder="0"
+          scrolling="no">
+        </iframe>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== INFO ===== -->
-  <section id="info">
-    <div class="container">
-      <h2>Información</h2>
-      <div class="panel">
-        <p><strong>¿Quiénes somos?</strong> En <em>Nomadas Tours</em> diseñamos experiencias de naturaleza y aventura de forma responsable, con guías locales y grupos reducidos.</p>
-        <ul class="list">
-          <li><strong>Incluye:</strong> Transporte redondo (cuando se indique), seguro de viajero, coordinador, fotografía básica.</li>
-          <li><strong>No incluye:</strong> Alimentos (salvo mención), gastos personales.</li>
-          <li><strong>Políticas:</strong> Anticipo para reservar, cambios de nombre según disponibilidad, reembolsos sujetos a políticas del proveedor.</li>
-        </ul>
+    <!-- ===== Tienda / Equipo de camping ===== -->
+    <section id="tienda">
+      <div class="container">
+        <h2>Equipo de camping</h2>
+        <p class="sub">Chamarras, sandalias, lámparas, casas de campaña y más.</p>
+        <div id="gridProducts" class="grid" aria-live="polite"></div>
+        <div id="emptyProducts" class="empty" hidden>No hay productos publicados por ahora.</div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ===== CONTACTO ===== -->
-  <section id="contacto">
-    <div class="container">
-      <h2>Contacto</h2>
-      <p class="sub">¿Tienes dudas o quieres reservar? Escríbenos.</p>
-      <div class="panel">
-        <form id="contactForm" novalidate>
-          <div class="row">
-            <div>
-              <label for="name">Nombre</label>
-              <input id="name" name="name" type="text" placeholder="Tu nombre" autocomplete="name" required />
+    <!-- ===== Información ===== -->
+    <section id="info">
+      <div class="container">
+        <h2>Información</h2>
+        <div class="panel">
+          <p><strong>¿Quiénes somos?</strong> En <em>Nomadas Tours</em> diseñamos experiencias de naturaleza y aventura de forma responsable, con guías locales y grupos reducidos.</p>
+          <ul class="list">
+            <li><strong>Incluye:</strong> Transporte redondo (cuando se indique), seguro de viajero, coordinador, fotografía básica.</li>
+            <li><strong>No incluye:</strong> Alimentos (salvo mención), gastos personales.</li>
+            <li><strong>Políticas:</strong> Anticipo para reservar, cambios de nombre según disponibilidad, reembolsos sujetos a políticas del proveedor.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NUEVO: Testimonios ===== -->
+    <section id="testimonios" aria-label="Opiniones de viajeros">
+      <div class="container">
+        <h2>Testimonios</h2>
+        <p class="sub">Lo que dicen quienes ya viajaron con nosotros.</p>
+        <div class="t-grid">
+          <article class="t-card">
+            <div class="t-head">
+              <img class="t-avatar" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=300&auto=format&fit=crop" alt="Avatar de Ana" loading="lazy">
+              <div>
+                <div class="t-name">Ana P.</div>
+                <div class="t-stars">★★★★★</div>
+              </div>
+            </div>
+            <p>La subida al Tacaná estuvo increíble. Buen equipo y súper organizados. ¡Repetiría sin dudar!</p>
+          </article>
+          <article class="t-card">
+            <div class="t-head">
+              <img class="t-avatar" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=300&auto=format&fit=crop" alt="Avatar de Luis" loading="lazy">
+              <div>
+                <div class="t-name">Luis G.</div>
+                <div class="t-stars">★★★★★</div>
+              </div>
+            </div>
+            <p>Excelente atención y guías locales. El kayak en el cañón fue lo máximo.</p>
+          </article>
+          <article class="t-card">
+            <div class="t-head">
+              <img class="t-avatar" src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=300&auto=format&fit=crop" alt="Avatar de Mar" loading="lazy">
+              <div>
+                <div class="t-name">Mar V.</div>
+                <div class="t-stars">★★★★★</div>
+              </div>
+            </div>
+            <p>Muy responsables con el entorno. Las cascadas y los miradores, ¡de película!</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contacto ===== -->
+    <section id="contacto">
+      <div class="container">
+        <h2>Contacto</h2>
+        <p class="sub">¿Tienes dudas o quieres reservar? Escríbenos.</p>
+        <div class="panel">
+          <form id="contactForm" novalidate>
+            <div class="row">
+              <div>
+                <label for="name">Nombre</label>
+                <input id="name" name="name" type="text" placeholder="Tu nombre" autocomplete="name" required />
+              </div>
+              <div>
+                <label for="email">Correo</label>
+                <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" required />
+              </div>
+            </div>
+            <div class="row">
+              <div>
+                <label for="phone">Teléfono (opcional)</label>
+                <input id="phone" name="phone" type="text" placeholder="+52 ..." autocomplete="tel" />
+              </div>
+              <div>
+                <label for="subject">Asunto</label>
+                <input id="subject" name="subject" type="text" placeholder="Reserva / Información / Otro" required />
+              </div>
             </div>
             <div>
-              <label for="email">Correo</label>
-              <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" autocomplete="email" required />
+              <label for="message">Mensaje</label>
+              <textarea id="message" name="message" placeholder="Cuéntanos qué destino te interesa y cuántas personas…" required></textarea>
             </div>
-          </div>
-          <div class="row">
-            <div>
-              <label for="phone">Teléfono (opcional)</label>
-              <input id="phone" name="phone" type="text" placeholder="+52 ..." autocomplete="tel" />
+            <div style="display:flex; gap:10px; flex-wrap:wrap">
+              <button type="submit" class="btn primary">Enviar</button>
+              <a class="btn" href="mailto:contacto@nomadastours.mx?subject=Info%20Nomadas%20Tours">Escribir por correo</a>
+              <a class="btn" href="https://wa.me/9613331461" target="_blank" rel="noopener">WhatsApp</a>
             </div>
-            <div>
-              <label for="subject">Asunto</label>
-              <input id="subject" name="subject" type="text" placeholder="Reserva / Información / Otro" required />
-            </div>
-          </div>
-          <div>
-            <label for="message">Mensaje</label>
-            <textarea id="message" name="message" placeholder="Cuéntanos qué destino te interesa y cuántas personas…" required></textarea>
-          </div>
-          <div style="display:flex; gap:10px; flex-wrap:wrap">
-            <button type="submit" class="btn primary">Enviar</button>
-            <a class="btn" href="mailto:contacto@nomadastours.mx?subject=Info%20Nomadas%20Tours">Escribir por correo</a>
-            <a class="btn" href="https://wa.me/9613331461" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
-          <p id="formStatus" class="muted" role="status" aria-live="polite"></p>
-        </form>
+            <p id="formStatus" class="muted" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ===== Footer ===== -->
   <footer>
     <div class="container">
       © <span id="y"></span> Nomadas Tours · Todos los derechos reservados
@@ -383,7 +425,7 @@
     </div>
   </footer>
 
-  <!-- ===== MODAL REUTILIZABLE ===== -->
+  <!-- ===== Modal reutilizable (destinos y productos) ===== -->
   <dialog id="dlg">
     <div class="dlg-head">
       <strong id="dlgTitle">Detalle</strong>
@@ -394,23 +436,19 @@
       <div class="muted" id="dlgMeta"></div>
       <div id="dlgDesc"></div>
       <div style="display:flex; gap:10px; flex-wrap:wrap">
-        <a id="dlgBtn" class="btn primary" href="#contacto">Quiero reservar</a>
+        <a id="dlgBtn" class="btn primary" href="#contacto">Reservar</a>
         <a id="dlgBtn2" class="btn" href="#calendario">Ver próximas fechas</a>
       </div>
     </div>
   </dialog>
 
-  <!-- ===== BOTÓN WHATSAPP ===== -->
-  <a class="wa-fab"
-     href="https://wa.me/529613331461?text=Hola%20Nomadas%20Tours,%20quiero%20reservar%20un%20viaje"
-     target="_blank" rel="noopener" aria-label="WhatsApp reservar Nomadas Tours">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M20 3.9A10 10 0 0 0 12 2 10 10 0 0 0 2 12c0 1.8.5 3.5 1.4 4.9L2 22l5.2-1.4A10 10 0 0 0 12 22a10 10 0 0 0 10-10c0-2.7-1.1-5.2-3-7.1zM12 20a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.6-5.4c-.2-.1-1.4-.7-1.6-.8-.2-.1-.3-.1-.5.1s-.6.8-.8 1c-.1.1-.3.1-.5 0a6.4 6.4 0 0 1-1.9-1.2 7.1 7.1 0  0 1-1.3-1.7c-.1-.2 0-.3.1-.4l.3-.4.2-.3c.1-.2.1-.3 0-.5l-.8-1.8c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.7.7-.7 1.8s.8 2.2 1 2.4c.2.3 1.6 2.5 3.9 3.5.5.2.9.3 1.2.4.5.2 1 .2 1.3.1.4-.1 1.4-.5 1.6-1.1.2-.5.2-1 .2-1.1 0-.1-.2-.1-.4-.2z"/>
-    </svg>
+  <!-- ===== Botón flotante WhatsApp ===== -->
+  <a class="wa-fab" href="https://wa.me/529613331461?text=Hola%20Nomadas%20Tours,%20quiero%20reservar%20un%20viaje" target="_blank" rel="noopener" aria-label="WhatsApp reservar Nomadas Tours">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 3.9A10 10 0 0 0 12 2 10 10 0 0 0 2 12c0 1.8.5 3.5 1.4 4.9L2 22l5.2-1.4A10 10 0 0 0 12 22a10 10 0 0 0 10-10c0-2.7-1.1-5.2-3-7.1zM12 20a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.6-5.4c-.2-.1-1.4-.7-1.6-.8-.2-.1-.3-.1-.5.1s-.6.8-.8 1c-.1.1-.3.1-.5 0a6.4 6.4 0 0 1-1.9-1.2 7.1 7.1 0  0 1-1.3-1.7c-.1-.2 0-.3.1-.4l.3-.4.2-.3c.1-.2.1-.3 0-.5l-.8-1.8c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.2-.7.7-.7 1.8s.8 2.2 1 2.4c.2.3 1.6 2.5 3.9 3.5.5.2.9.3 1.2.4.5.2 1 .2 1.3.1.4-.1 1.4-.5 1.6-1.1.2-.5.2-1 .2-1.1 0-.1-.2-.1-.4-.2z"/></svg>
   </a>
 
   <script>
-    /* ===== DRIVE CONFIG (IDs de imágenes) ===== */
+    /* ===== DRIVE CONFIG (IDs) ===== */
     const DRIVE = {
       logo: "1So1MGQYQVnuFH4OyB1YgdPfhRn-BhI7D",
       banner: "1jQu3saJziLenX8pe8yTouPdXJFMgppll",
@@ -420,109 +458,141 @@
         lacandona: "1OIdptCPkOr9_fC58jTzua9hq1NtioMtR",
         chiflon: "1DPMQxqN172twnZD8kEyk2DXeDmSn_bO7",
         chichonal: "1l9iNFpuGVh23HOlEf1M_wx023RmQJloI"
+      },
+      productos:{
+        chamarra:"", sandalia:"", lampara:"", casa:""
       }
     };
+
+    /* ===== Utilidades de imagen responsiva (Drive) ===== */
     function gdrive(id, size=1600){ return id ? `https://drive.google.com/thumbnail?id=${id}&sz=w${size}` : ""; }
+    function gdriveSrcset(id){
+      if(!id) return "";
+      const w = [480,800,1200,1600];
+      return w.map(s=>`https://drive.google.com/thumbnail?id=${id}&sz=w${s} ${s}w`).join(", ");
+    }
 
-    /* ===== DATOS: Destinos ===== */
+    /* ===== Datos: Destinos ===== */
     const DESTINOS = [
-      { id:"tacana-0726", titulo:"Volcán Tacaná", lugar:"Chiapas, MX", duracion:"2 días / 1 noche", precio:2490, etiquetas:["montaña","camping","amanecer"], fechas:["2025-07-26","2025-08-23","2025-09-20"], imagen:gdrive(DRIVE.fotos.tacana), descripcion:"Ascenso guiado con campamento en Papales y cumbre al amanecer. Incluye coordinador, equipo básico de campamento y seguro." },
-      { id:"kayak", titulo:"Kayak en el Cañón", lugar:"Chicoasén, MX", duracion:"1 día", precio:799, etiquetas:["cañon","kayak","conservacion"], fechas:["2025-08-30","2025-10-04"], imagen:gdrive(DRIVE.fotos.kayak), descripcion:"Kayak en el río Grijalva por las imponentes paredes del Cañón del Sumidero." },
-      { id:"lacandona-festival", titulo:"Selva Lacandona: Festival Jaguar Maya", lugar:"Ocosingo, Chiapas, MX", duracion:"2 días / 1 noche", precio:4720, etiquetas:["selva","cascadas","cultura"], fechas:["2025-08-23"], imagen:gdrive(DRIVE.fotos.lacandona), descripcion:"Cultura, naturaleza y aventura en Lacanjá Chansayab. Incluye acceso al festival, camping y senderismo interpretativo." },
-      { id:"chiflon-day", titulo:"Cascadas El Chiflón + Lagunas", lugar:"Chiapas, MX", duracion:"1 día", precio:1090, etiquetas:["cascadas","senderismo","fotografia"], fechas:["2025-09-06","2025-09-27"], imagen:gdrive(DRIVE.fotos.chiflon), descripcion:"Recorrido panorámico por las cascadas, sendero interpretativo y miradores. Ideal para fotografía y familias." },
-      { id:"chichonal-hike", titulo:"Volcán Chichonal + Aguas Azufradas", lugar:"Chiapas, MX", duracion:"2 días / 1 noche", precio:1950, etiquetas:["volcan","senderismo","termales"], fechas:["2025-09-13","2025-10-18"], imagen:gdrive(DRIVE.fotos.chichonal), descripcion:"Trekking al cráter del Chichonal. Nivel intermedio, vistas espectaculares." }
+      { id:"tacana-0726", titulo:"Volcán Tacaná", lugar:"Chiapas, MX", duracion:"2 días / 1 noche", precio:2490, etiquetas:["montaña","camping","amanecer"], fechas:["2025-08-23","2025-09-20"], imagen:DRIVE.fotos.tacana, descripcion:"Ascenso guiado con campamento en Papales y cumbre al amanecer. Incluye coordinador, equipo básico de campamento y seguro." },
+      { id:"kayak", titulo:"Kayak en el Cañón", lugar:"Chicoasén, MX", duracion:"1 día", precio:799, etiquetas:["cañon","kayak","conservacion"], fechas:["2025-08-30","2025-10-04"], imagen:DRIVE.fotos.kayak, descripcion:"Kayak en el río Grijalva por las imponentes paredes del Cañón del Sumidero." },
+      { id:"lacandona-festival", titulo:"Selva Lacandona: Festival Jaguar Maya", lugar:"Ocosingo, Chiapas, MX", duracion:"2 días / 1 noche", precio:4720, etiquetas:["selva","cascadas","cultura"], fechas:["2025-08-23"], imagen:DRIVE.fotos.lacandona, descripcion:"Cultura, naturaleza y aventura en Lacanjá Chansayab. Incluye acceso al festival, camping y senderismo." },
+      { id:"chiflon-day", titulo:"Cascadas El Chiflón + Lagunas", lugar:"Chiapas, MX", duracion:"1 día", precio:1090, etiquetas:["cascadas","senderismo","fotografia"], fechas:["2025-09-06","2025-09-27"], imagen:DRIVE.fotos.chiflon, descripcion:"Recorrido panorámico por las cascadas, sendero interpretativo y miradores. Ideal para fotografía y familias." },
+      { id:"chichonal-hike", titulo:"Volcán Chichonal + Aguas Azufradas", lugar:"Chiapas, MX", duracion:"2 días / 1 noche", precio:1950, etiquetas:["volcan","senderismo","termales"], fechas:["2025-09-13","2025-10-18"], imagen:DRIVE.fotos.chichonal, descripcion:"Trekking al cráter del Chichonal. Nivel intermedio, vistas espectaculares." }
     ];
 
-    /* ===== DATOS: Productos (tienda) ===== */
+    /* ===== Datos: Productos (tienda) ===== */
     const PRODUCTS = [
-      { id:"chamarra-pro",  titulo:"Chamarra impermeable Pro", categoria:"Ropa",        precio:1490, imagen:"https://images.unsplash.com/photo-1548883354-7622d5436c81?q=80&w=1200&auto=format&fit=crop", descripcion:"Resistente al agua y respirable. Ideal para alta montaña o lluvias intensas." },
-      { id:"sandalia-trekking", titulo:"Sandalias de trekking", categoria:"Calzado",    precio:690,  imagen:"https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1200&auto=format&fit=crop", descripcion:"Suela adherente y secado rápido para travesías acuáticas." },
-      { id:"lampara-frontal",  titulo:"Lámpara frontal 300 lm",  categoria:"Iluminación", precio:520,  imagen:"https://images.unsplash.com/photo-1504280390368-3971ed4cb998?q=80&w=1200&auto=format&fit=crop", descripcion:"3 modos de luz, batería recargable, IPX4." },
-      { id:"casa-2p",          titulo:"Casa de campaña 2P Liviana", categoria:"Refugio", precio:2790, imagen:"https://images.unsplash.com/photo-1504280390368-3971ed4cb998?q=80&w=1200&auto=format&fit=crop", descripcion:"Doble techo, varillas de aluminio, 2.3 kg." }
+      { id:"chamarra-pro", titulo:"Chamarra impermeable Pro", categoria:"Ropa", precio:1490, imagen:DRIVE.productos.chamarra || "https://images.unsplash.com/photo-1548883354-7622d5436c81?q=80&w=1600&auto=format&fit=crop", descripcion:"Resistente al agua y respirable. Ideal para alta montaña o lluvias intensas." },
+      { id:"sandalia-trekking", titulo:"Sandalias de trekking", categoria:"Calzado", precio:690, imagen:DRIVE.productos.sandalia || "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1600&auto=format&fit=crop", descripcion:"Suela adherente y secado rápido para travesías acuáticas." },
+      { id:"lampara-frontal", titulo:"Lámpara frontal 300 lm", categoria:"Iluminación", precio:520, imagen:DRIVE.productos.lampara || "https://images.unsplash.com/photo-1504280390368-3971ed4cb998?q=80&w=1600&auto=format&fit=crop", descripcion:"3 modos de luz, batería recargable, IPX4." },
+      { id:"casa-2p", titulo:"Casa de campaña 2P Liviana", categoria:"Refugio", precio:2790, imagen:DRIVE.productos.casa || "https://images.unsplash.com/photo-1504280390368-3971ed4cb998?q=80&w=1600&auto=format&fit=crop", descripcion:"Doble techo, varillas de aluminio, 2.3 kg." }
     ];
 
-    /* ===== UTILIDADES ===== */
-    const $ = s => document.querySelector(s);
+    /* ===== Helpers ===== */
+    const $ = sel => document.querySelector(sel);
     const grid = $("#grid"), empty = $("#empty");
     const q = $("#q"), tag = $("#tag"), sort = $("#sort");
-    const dlg = $("#dlg"), dlgTitle=$("#dlgTitle"), dlgImg=$("#dlgImg"), dlgMeta=$("#dlgMeta"), dlgDesc=$("#dlgDesc");
+    const dlg = $("#dlg"), dlgClose=$("#dlgClose"), dlgTitle=$("#dlgTitle"), dlgImg=$("#dlgImg"), dlgMeta=$("#dlgMeta"), dlgDesc=$("#dlgDesc");
+    const WA_PHONE = "529613331461"; // ← Número de WhatsApp con clave país
 
-    function formatMoney(n){ return new Intl.NumberFormat('es-MX',{maximumFractionDigits:0}).format(n) }
-    function formatDate(s){ const dt = new Date(s+"T00:00:00"); return dt.toLocaleDateString('es-MX',{year:'numeric',month:'short',day:'numeric'}) }
-    function escapeHtml(str){ return String(str).replace(/[&<>"']/g, s => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[s])) }
+    function formatMoney(n){ return new Intl.NumberFormat('es-MX',{maximumFractionDigits:0}).format(n)}
+    function formatDate(s){ const dt=new Date(s+"T00:00:00"); return dt.toLocaleDateString('es-MX',{year:'numeric',month:'short',day:'numeric'}); }
+    function escapeHtml(str){ return String(str).replace(/[&<>"']/g, s=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[s])) }
     function durToMin(t){
       const m=/(\d+)\s*d[ií]as?.*?(\d+)\s*noches?/i.exec(t)||/(\d+)\s*d[ií]as?/i.exec(t)||/(\d+)\s*noches?/i.exec(t);
-      if(!m) return 0; let d=0,n=0; if(m.length===3){d=+m[1]||0; n=+m[2]||0}else if(/d[ií]as?/.test(t)) d=+m[1]||0; else n=+m[1]||0;
+      if(!m) return 0; let d=0,n=0;
+      if(m.length===3){ d=parseInt(m[1])||0; n=parseInt(m[2])||0 }
+      else if(/d[ií]as?/.test(t)) d=parseInt(m[1])||0; else n=parseInt(m[1])||0;
       return (d*24*60)+(n*12*60);
     }
 
-    /* ===== RENDER: Filtros y tarjetas de destinos (con imágenes optimizadas) ===== */
+    /* ===== Llenar etiquetas ===== */
     function fillTags(){
       const all=new Set(); DESTINOS.forEach(d=>d.etiquetas.forEach(e=>all.add(e)));
       [...all].sort().forEach(e=>{ const opt=document.createElement("option"); opt.value=e; opt.textContent=e.charAt(0).toUpperCase()+e.slice(1); tag.appendChild(opt); });
     }
+
+    /* ===== Render destinos (BOTONES → WhatsApp) ===== */
     function render(){
-      const term=(q.value||"").toLowerCase().trim(); const filterTag=tag.value;
-      let list=DESTINOS.filter(d=>{ const txt=[d.titulo,d.lugar,d.etiquetas.join(" "),d.descripcion].join(" ").toLowerCase(); const okTerm=!term||txt.includes(term); const okTag=!filterTag||d.etiquetas.includes(filterTag); return okTerm&&okTag; });
+      const term=(q.value||"").toLowerCase().trim();
+      const filterTag=tag.value;
+
+      let list = DESTINOS.filter(d=>{
+        const hayTerm=!term || [d.titulo,d.lugar,d.etiquetas.join(" "),d.descripcion].join(" ").toLowerCase().includes(term);
+        const hayTag=!filterTag || d.etiquetas.includes(filterTag);
+        return hayTerm && hayTag;
+      });
+
       switch(sort.value){
         case "price-asc": list.sort((a,b)=>a.precio-b.precio); break;
         case "price-desc": list.sort((a,b)=>b.precio-a.precio); break;
         case "duration-asc": list.sort((a,b)=>durToMin(a.duracion)-durToMin(b.duracion)); break;
         case "duration-desc": list.sort((a,b)=>durToMin(b.duracion)-durToMin(a.duracion)); break;
-        default: list.sort((a,b)=>{const da=a.fechas?.[0]?new Date(a.fechas[0]):new Date(0); const db=b.fechas?.[0]?new Date(b.fechas[0]):new Date(0); return db-da;});
+        default: list.sort((a,b)=>{ const da=a.fechas?.[0]?new Date(a.fechas[0]):new Date(0); const db=b.fechas?.[0]?new Date(b.fechas[0]):new Date(0); return db-da; });
       }
-      grid.innerHTML=""; if(!list.length){ empty.hidden=false; return } empty.hidden=true;
+
+      grid.innerHTML="";
+      if(!list.length){ empty.hidden=false; return }
+      empty.hidden=true;
 
       for(const d of list){
+        const imgId = d.imagen;
+        const src = imgId ? gdrive(imgId, 1200) : "https://images.unsplash.com/photo-1508261303786-0e1a72d08c7a?q=80&w=1200&auto=format&fit=crop";
+        const srcset = imgId ? gdriveSrcset(imgId) : `${src} 1200w`;
+        const waText = `Hola Nomadas Tours, quiero reservar *${d.titulo}* (ID: ${d.id})${d.fechas?.length ? ` para la fecha ${formatDate(d.fechas[0])}`:""}.`;
+        const waLink = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(waText)}`;
+
         const card=document.createElement("article");
         card.className="card";
-        const src=d.imagen, src2=(d.imagen||"").replace(/w1600|w\d+/, "w800");
-        card.innerHTML=`
+        card.innerHTML = `
           <div class="thumb">
-            <img src="${src}" srcset="${src2} 800w, ${src} 1600w" sizes="(max-width:700px) 100vw, 50vw"
+            <img src="${src}" srcset="${srcset}" sizes="(max-width:700px) 100vw, 50vw"
                  alt="${escapeHtml(d.titulo)} - ${escapeHtml(d.lugar)}" loading="lazy">
-            <div class="badges">${d.etiquetas.map(e=>`<span class="badge">#${escapeHtml(e)}</span>`).join("")}</div>
+            <div class="badges">
+              ${d.etiquetas.map(e=>`<span class="badge">#${escapeHtml(e)}</span>`).join("")}
+            </div>
           </div>
           <div class="body">
             <div class="title">${escapeHtml(d.titulo)}</div>
-            <div class="meta"><span>📍 ${escapeHtml(d.lugar)}</span><span>· ⏱️ ${escapeHtml(d.duracion)}</span></div>
-            <div class="meta"><span class="price">$${formatMoney(d.precio)} MXN</span>${d.fechas?.length?`<span>· Próxima: ${formatDate(d.fechas[0])}</span>`:""}</div>
-            <div class="actions">
-              <button class="btn primary" data-id="${d.id}" data-action="detalle">Ver detalles</button>
-              <a class="btn" href="#contacto">Reservar</a>
+            <div class="meta">
+              <span>📍 ${escapeHtml(d.lugar)}</span>
+              <span>· ⏱️ ${escapeHtml(d.duracion)}</span>
             </div>
-          </div>`;
+            <div class="meta">
+              <span class="price">$${formatMoney(d.precio)} MXN</span>
+              ${d.fechas?.length ? `<span>· Próxima: ${formatDate(d.fechas[0])}</span>` : ""}
+            </div>
+            <div class="actions">
+              <button class="btn" data-id="${d.id}" data-action="detalle">Más detalles</button>
+              <a class="btn primary" href="${waLink}" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+            </div>
+          </div>
+        `;
         grid.appendChild(card);
       }
     }
 
-    /* ===== LISTENER: Modal de destinos ===== */
-    document.addEventListener("click", (e)=>{
-      const btn=e.target.closest("[data-action='detalle']"); if(!btn) return;
-      const d=DESTINOS.find(x=>x.id===btn.getAttribute("data-id")); if(!d) return;
-      dlgTitle.textContent=d.titulo; dlgImg.src=d.imagen; dlgImg.alt=`${d.titulo} - ${d.lugar}`;
-      dlgMeta.textContent=`📍 ${d.lugar} · ⏱️ ${d.duracion} · $${formatMoney(d.precio)} MXN` + (d.fechas?.length?` · Próximas: ${d.fechas.map(f=>formatDate(f)).join(", ")}`:"");
-      dlgDesc.textContent=d.descripcion;
-      $("#dlgBtn").textContent="Quiero reservar"; $("#dlgBtn").setAttribute("href","#contacto");
-      $("#dlgBtn2").textContent="Ver próximas fechas"; $("#dlgBtn2").setAttribute("href","#calendario");
-      dlg.showModal();
-    });
-    $("#dlgClose").addEventListener("click", ()=> dlg.close());
-
-    /* ===== RENDER: Productos + WhatsApp + Modal de producto ===== */
+    /* ===== Render productos (botón → WhatsApp y modal) ===== */
     function renderProducts(){
-      const wrap=$("#gridProducts"), emp=$("#emptyProducts"); if(!wrap) return;
-      const WA="529613331461"; wrap.innerHTML="";
-      if(!PRODUCTS.length){ emp.hidden=false; return } emp.hidden=true;
+      const wrap=$("#gridProducts"), empty=$("#emptyProducts"); if(!wrap) return;
+      wrap.innerHTML=""; if(!PRODUCTS.length){ empty.hidden=false; return } empty.hidden=true;
 
       for(const p of PRODUCTS){
-        const waText=`Hola Nomadas Tours, me interesa el producto "${p.titulo}" (ID: ${p.id}). ¿Está disponible?`;
-        const waLink=`https://wa.me/${WA}?text=${encodeURIComponent(waText)}`;
-        const card=document.createElement("article"); card.className="card";
-        card.innerHTML=`
+        const src = p.imagen.startsWith("http") ? p.imagen : gdrive(p.imagen, 1200);
+        const srcset = p.imagen.startsWith("http") ? `${p.imagen} 1200w` : gdriveSrcset(p.imagen);
+        const waText = `Hola Nomadas Tours, me interesa el producto "${p.titulo}" (ID: ${p.id}). ¿Está disponible?`;
+        const waLink = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(waText)}`;
+
+        const card=document.createElement("article");
+        card.className="card";
+        card.innerHTML = `
           <div class="thumb">
-            <img src="${p.imagen}" alt="${escapeHtml(p.titulo)} - ${escapeHtml(p.categoria||'Equipo')}" loading="lazy">
-            <div class="badges">${p.categoria?`<span class="badge">#${escapeHtml(p.categoria.toLowerCase())}</span>`:""}</div>
+            <img src="${src}" srcset="${srcset}" sizes="(max-width:700px) 100vw, 33vw"
+                 alt="${escapeHtml(p.titulo)} - ${escapeHtml(p.categoria||'Equipo')}" loading="lazy">
+            <div class="badges">
+              ${p.categoria ? `<span class="badge">#${escapeHtml(p.categoria.toLowerCase())}</span>`:""}
+            </div>
           </div>
           <div class="body">
             <div class="title">${escapeHtml(p.titulo)}</div>
@@ -532,87 +602,128 @@
               <a class="btn primary" href="${waLink}" target="_blank" rel="noopener">Comprar por WhatsApp</a>
               <button class="btn" data-action="detalle-producto" data-id="${p.id}">Más detalles</button>
             </div>
-          </div>`;
+          </div>
+        `;
         wrap.appendChild(card);
       }
     }
-    document.addEventListener("click",(e)=>{
-      const btn=e.target.closest("[data-action='detalle-producto']"); if(!btn) return;
-      const p=PRODUCTS.find(x=>x.id===btn.getAttribute("data-id")); if(!p) return;
-      dlgTitle.textContent=p.titulo; dlgImg.src=p.imagen; dlgImg.alt=`${p.titulo} - ${p.categoria||"Equipo"}`;
-      dlgMeta.textContent=`${p.categoria?`🧭 ${p.categoria} · `:""}💲 $${formatMoney(p.precio)} MXN`; dlgDesc.textContent=p.descripcion||"";
-      const WA="529613331461"; const waText=`Hola Nomadas Tours, me interesa el producto "${p.titulo}" (ID: ${p.id}). ¿Me das más detalles?`;
-      const waLink=`https://wa.me/${WA}?text=${encodeURIComponent(waText)}`;
-      $("#dlgBtn").textContent="Comprar por WhatsApp"; $("#dlgBtn").setAttribute("href", waLink);
-      $("#dlgBtn2").textContent="Contactar"; $("#dlgBtn2").setAttribute("href","#contacto");
-      dlg.showModal();
+
+    /* ===== Eventos: detalle destinos ===== */
+    document.addEventListener("click", (e)=>{
+      const btn = e.target.closest("[data-action='detalle']"); if(!btn) return;
+      const d = DESTINOS.find(x=>x.id===btn.getAttribute("data-id")); if(!d) return;
+
+      const src = d.imagen ? gdrive(d.imagen, 1600) : "https://images.unsplash.com/photo-1508261303786-0e1a72d08c7a?q=80&w=1600&auto=format&fit=crop";
+      dlgTitle.textContent = d.titulo;
+      dlgImg.src = src; dlgImg.alt = `${d.titulo} - ${d.lugar}`;
+      dlgMeta.textContent = `📍 ${d.lugar} · ⏱️ ${d.duracion} · $${formatMoney(d.precio)} MXN` + (d.fechas?.length? ` · Próximas: ${d.fechas.map(f=>formatDate(f)).join(", ")}`:"");
+      dlgDesc.textContent = d.descripcion;
+
+      const waText = `Hola Nomadas Tours, quiero reservar *${d.titulo}* (ID: ${d.id}).`;
+      const waLink = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(waText)}`;
+      const dlgBtn = document.getElementById("dlgBtn");
+      dlgBtn.textContent = "Reservar por WhatsApp";
+      dlgBtn.setAttribute("href", waLink);
+
+      const dlgBtn2 = document.getElementById("dlgBtn2");
+      dlgBtn2.textContent = "Ver próximas fechas";
+      dlgBtn2.setAttribute("href", "#calendario");
+
+      if(typeof dlg.showModal==="function"){ dlg.showModal(); }
     });
 
-    /* ===== TESTIMONIOS (render) ===== */
-    const TESTIMONIOS = [
-      { n:"Mariana R.", t:"Tacaná increíble, amanecer inolvidable. Organización 10/10.", s:5 },
-      { n:"Luis M.", t:"Kayak en el Cañón súper seguro y divertido. ¡Regreso pronto!", s:5 },
-      { n:"Ana P.", t:"La Selva Lacandona fue mágica. Guías atentos y respetuosos.", s:4 },
-      { n:"Diego C.", t:"Excelente relación precio/experiencia. Recomendados.", s:5 }
-    ];
-    function renderTestis(){
-      const box=$("#testiList"); if(!box) return;
-      box.innerHTML=""; TESTIMONIOS.forEach(x=>{
-        const li=document.createElement("article"); li.className="testi-card";
-        li.innerHTML=`<div class="stars">${"★".repeat(x.s)}${"☆".repeat(5-x.s)}</div><p style="margin:.4rem 0 0.6rem">${escapeHtml(x.t)}</p><div class="muted">— ${escapeHtml(x.n)}</div>`;
-        box.appendChild(li);
-      });
-    }
+    /* ===== Eventos: detalle productos (mismo modal) ===== */
+    document.addEventListener("click", (e)=>{
+      const btn = e.target.closest("[data-action='detalle-producto']"); if(!btn) return;
+      const p = PRODUCTS.find(x=>x.id===btn.getAttribute("data-id")); if(!p) return;
 
-    /* ===== FORM (simulado) ===== */
-    const form=$("#contactForm"), formStatus=$("#formStatus");
+      dlgTitle.textContent = p.titulo;
+      dlgImg.src = p.imagen.startsWith("http") ? p.imagen : gdrive(p.imagen, 1600);
+      dlgImg.alt = `${p.titulo} - ${p.categoria||"Equipo"}`;
+      dlgMeta.textContent = `${p.categoria?`🧭 ${p.categoria} · `:""}💲 $${formatMoney(p.precio)} MXN`;
+      dlgDesc.textContent = p.descripcion || "";
+
+      const waText = `Hola Nomadas Tours, me interesa el producto "${p.titulo}" (ID: ${p.id}). ¿Me das más detalles?`;
+      const waLink = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(waText)}`;
+      document.getElementById("dlgBtn").textContent = "Comprar por WhatsApp";
+      document.getElementById("dlgBtn").setAttribute("href", waLink);
+      document.getElementById("dlgBtn2").textContent = "Contactar";
+      document.getElementById("dlgBtn2").setAttribute("href", "#contacto");
+
+      if(typeof dlg.showModal==="function"){ dlg.showModal(); }
+    });
+
+    /* ===== Cerrar modal ===== */
+    document.getElementById("dlgClose").addEventListener("click", ()=> dlg.close());
+
+    /* ===== Inputs filtros ===== */
+    [q, tag, sort].forEach(el=>el.addEventListener("input", render));
+
+    /* ===== Formulario (simulado) ===== */
+    const form = $("#contactForm"), formStatus=$("#formStatus");
     form.addEventListener("submit",(e)=>{
       e.preventDefault();
-      const req=["name","email","subject","message"]; const data=new FormData(form);
-      for(const k of req){ if(!String(data.get(k)||"").trim()){ formStatus.textContent="Por favor completa los campos requeridos."; formStatus.style.color="var(--warn)"; return; } }
-      formStatus.textContent="¡Gracias! Tu mensaje ha sido enviado (simulado). Te responderemos pronto."; formStatus.style.color="var(--ok)"; form.reset(); setTimeout(()=> formStatus.textContent="", 4000);
+      const data=new FormData(form);
+      const required=["name","email","subject","message"];
+      for(const k of required){
+        if(!String(data.get(k)||"").trim()){
+          formStatus.textContent="Por favor completa los campos requeridos.";
+          formStatus.style.color="var(--warn)"; return;
+        }
+      }
+      formStatus.textContent="¡Gracias! Tu mensaje ha sido enviado (simulado). Te responderemos pronto.";
+      formStatus.style.color="var(--ok)";
+      form.reset(); setTimeout(()=> formStatus.textContent="", 4000);
     });
 
-    /* ===== BANNER (Drive) ===== */
+    /* ===== Banner: carga desde Drive y recordatorio de cierre ===== */
     (function(){
       const sect=$("#promoBanner"), img=$("#bannerImg"), link=$("#bannerLink"), btnX=$("#bannerClose");
-      const k='banner-dismissed-at', seven=7*24*60*60*1000, last=Number(localStorage.getItem(k)||0);
-      if(Date.now()-last<seven){ sect.classList.add('banner--hidden'); return; }
-      const url=gdrive(DRIVE.banner,1600); if(!url){ sect.classList.add('banner--hidden'); return; }
-      img.src=url; img.alt="Promoción Nomadas Tours"; link.href="#destinos"; sect.classList.remove('banner--hidden');
-      btnX.addEventListener('click', e=>{ e.preventDefault(); localStorage.setItem(k,String(Date.now())); sect.classList.add('banner--hidden'); });
+      const kDismiss='banner-dismissed-at', sevenDays=7*24*60*60*1000, last=Number(localStorage.getItem(kDismiss)||0);
+      if (Date.now()-last < sevenDays){ sect.classList.add('banner--hidden'); return; }
+
+      const url=gdrive(DRIVE.banner, 1600);
+      if(!url){ sect.classList.add('banner--hidden'); return; }
+      img.src=url; img.alt="Promoción Nomadas Tours";
+      link.href="#destinos"; sect.classList.remove('banner--hidden');
+      btnX.addEventListener('click',(e)=>{ e.preventDefault(); localStorage.setItem(kDismiss,String(Date.now())); sect.classList.add('banner--hidden'); });
     })();
 
-    /* ===== MENÚ HAMBURGUESA (JS) ===== */
-    (function(){
-      const toggle=$("#menuToggle"), nav=$("#mainNav");
-      function setOpen(open){ nav.classList.toggle('open',open); toggle.setAttribute('aria-expanded', open?"true":"false"); document.body.classList.toggle('menu-open', open); }
-      toggle.addEventListener('click', ()=> setOpen(!nav.classList.contains('open')));
-      nav.querySelectorAll('a').forEach(a=>a.addEventListener('click', ()=> setOpen(false)));
-      addEventListener('resize', ()=>{ if(innerWidth>860 && nav.classList.contains('open')) setOpen(false); });
-    })();
-
-    /* ===== CALENDARIO: cambiar vista ===== */
+    /* ===== Calendario: cambiar vista ===== */
     (function(){
       const CAL_ID="3aef757278e2553c10237567a64c6c8f16a750947e508b41d3a32e280591be58@group.calendar.google.com";
-      const base="https://calendar.google.com/calendar/embed"; const tz="America%2FMerida";
+      const base="https://calendar.google.com/calendar/embed";
+      const tz="America%2FMerida";
       const common=`src=${encodeURIComponent(CAL_ID)}&ctz=${tz}&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showDate=1&showNav=1`;
       const frame=$("#calFrame");
-      document.querySelectorAll(".cal-toolbar .btn").forEach(b=> b.addEventListener("click", ()=> frame.src=`${base}?${common}&mode=${b.getAttribute("data-view")}` ));
+      document.querySelectorAll(".cal-toolbar .btn").forEach(btn=>{
+        btn.addEventListener("click",()=>{ const view=btn.getAttribute("data-view"); frame.src=`${base}?${common}&mode=${view}`; });
+      });
     })();
 
-    /* ===== INIT ===== */
-    function init(){
+    /* ===== Menú hamburguesa (móvil) ===== */
+    (function(){
+      const toggle=$("#navToggle"), nav=$("#navMenu");
+      toggle.addEventListener("click", ()=>{
+        const open = nav.classList.toggle("open");
+        toggle.setAttribute("aria-expanded", String(open));
+      });
+      nav.addEventListener("click",(e)=>{ if(e.target.tagName==="A") { nav.classList.remove("open"); toggle.setAttribute("aria-expanded","false"); } });
+    })();
+
+    /* ===== Init ===== */
+    function fillLogo(){
       const logoUrl=gdrive(DRIVE.logo,512), logoImg=$("#logoImg"), logoBadge=$("#logoBadge");
       if(logoUrl){ logoImg.src=logoUrl; logoImg.style.display="block"; logoBadge.style.display="none"; }
-      fillTags(); render(); renderProducts(); renderTestis(); $("#y").textContent=new Date().getFullYear();
-      [q,tag,sort].forEach(el=> el.addEventListener("input", render));
+    }
+    function init(){
+      fillLogo(); fillTags(); render(); renderProducts();
+      $("#y").textContent=new Date().getFullYear();
     }
     document.addEventListener("DOMContentLoaded", init);
   </script>
 </body>
 </html>
-
 
 
 
