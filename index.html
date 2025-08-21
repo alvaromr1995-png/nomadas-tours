@@ -19,7 +19,7 @@
   <meta property="og:image" content="https://drive.google.com/thumbnail?id=1jQu3saJziLenX8pe8yTouPdXJFMgppll&sz=w1200" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- ===== JSON-LD (Organization + WebSite) ===== -->
+  <!-- ===== JSON-LD ===== -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -32,7 +32,9 @@
   </script>
 
   <style>
-    /* ===== Tema y base ===== */
+    /* =========================================================
+       Tema y base
+    ========================================================== */
     :root{
       --bg:#0f172a; --panel:#111827; --muted:#94a3b8; --text:#e5e7eb;
       --brand:#22d3ee; --brand-2:#38bdf8; --ok:#22c55e; --warn:#f59e0b; --err:#ef4444;
@@ -57,7 +59,9 @@
     a:hover{color:var(--brand-2)}
     .container{max-width:1140px; margin:0 auto; padding:0 20px}
 
-    /* ===== Header sticky ===== */
+    /* =========================================================
+       Header + menú hamburguesa
+    ========================================================== */
     header{
       position:sticky; top:0; z-index:60; backdrop-filter:blur(10px);
       background:rgba(15,23,42,.65); border-bottom:1px solid rgba(255,255,255,.06);
@@ -69,17 +73,35 @@
     .logo-img{height:56px;width:auto;display:none;filter:drop-shadow(0 4px 16px rgba(34,211,238,.35))}
     @media (max-width:820px){ .logo-img{height:44px} .logo-badge{display:none} }
 
-    /* ===== NUEVO: Header con menú hamburguesa en móvil ===== */
-    .hamburger{display:none;background:transparent;border:1px solid rgba(255,255,255,.18);color:var(--text);border-radius:10px;padding:8px 10px;cursor:pointer}
-    .hamburger svg{width:20px;height:20px}
+    /* ===== MENÚ HAMBURGUESA VISIBLE ===== */
+    .hamburger{
+      display:none;
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.25);
+      border-radius:10px;
+      padding:8px 10px;
+      cursor:pointer;
+    }
+    .hamburger svg{
+      width:22px; height:22px;
+      stroke:#fff; stroke-width:2.2; fill:none; /* 3 rayas blancas */
+      display:block;
+    }
+
     nav#navMenu{display:flex;align-items:center}
     nav#navMenu ul{display:flex; gap:18px; list-style:none; padding:0; margin:0}
     nav#navMenu a{padding:10px 12px; border-radius:10px; color:var(--text)}
     nav#navMenu a:hover{background:rgba(255,255,255,.06)}
+
+    /* Redes – centrado perfecto de los SVG */
     .socials{display:flex; align-items:center; gap:10px; margin-left:16px}
-    .socials a{display:grid; place-items:center; width:36px; height:36px; border-radius:10px; color:var(--text); border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04)}
+    .socials a{
+      display:grid; place-items:center;
+      width:36px; height:36px; border-radius:10px; color:var(--text);
+      border:1px solid rgba(255,255,255,.12); background:rgba(255,255,255,.04)
+    }
     .socials a:hover{background:rgba(255,255,255,.08)}
-    .socials svg{width:18px;height:18px}
+    .socials svg{width:18px;height:18px;display:block}
 
     @media (max-width:820px){
       .hamburger{display:block}
@@ -93,7 +115,9 @@
       .socials{margin-left:0}
     }
 
-    /* ===== Hero ===== */
+    /* =========================================================
+       Hero
+    ========================================================== */
     .hero{padding:72px 0 56px; text-align:center; position:relative; z-index:1;}
     .hero h1{font-size:clamp(28px,4vw,44px); margin:0 0 10px}
     .hero p{color:var(--muted); margin:0 0 22px}
@@ -104,7 +128,9 @@
       background-size:100% 100%; filter:drop-shadow(0 -6px 16px rgba(0,0,0,.25));
     }
 
-    /* ===== Secciones y tarjetas ===== */
+    /* =========================================================
+       Secciones, tarjetas y utilidades
+    ========================================================== */
     section{padding:48px 0}
     section h2{font-size:clamp(22px,3vw,32px); margin:0 0 18px}
     .sub{color:var(--muted); margin-top:-6px; margin-bottom:24px}
@@ -126,10 +152,14 @@
     .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#06161f; border:none; font-weight:800}
     .empty{opacity:.7; border:1px dashed rgba(255,255,255,.2); border-radius:12px; padding:18px; text-align:center}
 
-    /* ===== Calendario (iframe) ===== */
+    /* =========================================================
+       Calendario (iframe)
+    ========================================================== */
     .calendar-embed{width:100%; height:650px; border:1px solid rgba(255,255,255,.1); border-radius:var(--radius); overflow:hidden}
 
-    /* ===== Paneles / formularios ===== */
+    /* =========================================================
+       Paneles / formularios
+    ========================================================== */
     .panel{background:var(--panel); border:1px solid rgba(255,255,255,.06); border-radius:var(--radius); padding:18px}
     .list{display:grid; gap:10px; padding-left:18px}
     form{display:grid; gap:12px}
@@ -139,13 +169,18 @@
     .row{display:grid; gap:12px; grid-template-columns:1fr 1fr}
     @media (max-width:700px){ .row{grid-template-columns:1fr} }
 
-    /* ===== Footer ===== */
+    /* =========================================================
+       Footer
+    ========================================================== */
     footer{padding:26px 0 40px; color:var(--muted); text-align:center}
     .footer-socials{display:flex; justify-content:center; gap:14px; margin-top:10px}
     .footer-socials a{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.04);color:var(--text)}
     .footer-socials a:hover{background:rgba(255,255,255,.08)}
+    .footer-socials svg{width:18px;height:18px;display:block}
 
-    /* ===== Modal (dialog) ===== */
+    /* =========================================================
+       Modal (dialog)
+    ========================================================== */
     dialog{border:none;border-radius:18px;padding:0;width:min(820px,92vw);background:var(--panel);color:var(--text);box-shadow:var(--shadow);overflow:hidden}
     dialog::backdrop{background:rgba(0,0,0,.6)}
     .dlg-head{padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between}
@@ -154,7 +189,9 @@
     .dlg-hero{aspect-ratio:16/9;border-radius:14px;overflow:hidden}
     .muted{color:var(--muted)}
 
-    /* ===== Banner (Drive) ===== */
+    /* =========================================================
+       Banner (Drive)
+    ========================================================== */
     .banner{position:relative;width:100%;overflow:hidden;border-bottom:3px solid var(--brand);background:#0b1220}
     .banner--hidden{display:none}
     .banner-link{display:block;position:relative;text-decoration:none;color:inherit}
@@ -164,7 +201,9 @@
     .banner-texto p{margin:6px 0 0;font-size:clamp(14px,2vw,18px);color:#e5e7eb}
     .banner .x{position:absolute;top:12px;right:12px;z-index:2;cursor:pointer;background:rgba(0,0,0,.45);color:#fff;border:1px solid rgba(255,255,255,.25);padding:6px 10px;border-radius:10px}
 
-    /* ===== NUEVO: botón flotante de WhatsApp pequeño ===== */
+    /* =========================================================
+       Botón flotante WhatsApp
+    ========================================================== */
     .wa-fab{
       position:fixed; right:16px; bottom:16px; z-index:70;
       width:52px;height:52px;border-radius:50%; background:#25D366; display:grid; place-items:center;
@@ -173,15 +212,41 @@
     .wa-fab:hover{ transform:translateY(-2px); filter:brightness(1.05) }
     .wa-fab svg{ width:24px; height:24px; color:#fff }
 
-    /* ===== NUEVO: Testimonios ===== */
-    .t-grid{display:grid; gap:16px; grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
-    .t-card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px;box-shadow:var(--shadow)}
+    /* =========================================================
+       Testimonios (Carrusel)
+    ========================================================== */
+    .t-slider{ position:relative; }
+    .t-track{
+      display:flex; gap:16px;
+      overflow-x:auto; scroll-snap-type:x mandatory;
+      scroll-behavior:smooth; padding-bottom:6px;
+    }
+    .t-card{
+      flex:0 0 82%; max-width:82%;
+      scroll-snap-align:start;
+      background:var(--card);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:14px; padding:14px; box-shadow:var(--shadow)
+    }
+    @media (min-width:700px){ .t-card{ flex-basis:46%; max-width:46%; } }
+    @media (min-width:1024px){ .t-card{ flex-basis:32%; max-width:32%; } }
     .t-head{display:flex;align-items:center;gap:12px;margin-bottom:8px}
     .t-avatar{width:42px;height:42px;border-radius:50%;object-fit:cover}
     .t-name{font-weight:700}
     .t-stars{color:#fde68a}
+    .t-nav{
+      position:absolute; top:50%; transform:translateY(-50%);
+      width:38px; height:38px; border-radius:999px;
+      display:grid; place-items:center;
+      background:rgba(0,0,0,.45); color:#fff; border:1px solid rgba(255,255,255,.25);
+      cursor:pointer; z-index:2;
+    }
+    .t-prev{ left:-6px } .t-next{ right:-6px }
+    @media (max-width:700px){ .t-prev{left:2px} .t-next{right:2px} }
 
-    /* ===== Mejoras mobile ===== */
+    /* =========================================================
+       Mejoras mobile
+    ========================================================== */
     @media (max-width:700px){
       .banner img{height:34vh;min-height:200px}
       .banner-texto{inset:auto 12px 12px 12px; padding:12px 14px}
@@ -196,7 +261,9 @@
   </style>
 </head>
 <body>
-  <!-- ===== Header con logo + menú hamburguesa ===== -->
+  <!-- =======================================================
+       Header con logo + menú hamburguesa
+  ======================================================== -->
   <header>
     <div class="container nav" role="navigation" aria-label="Principal">
       <div class="logo">
@@ -205,8 +272,9 @@
         <div>Nomadas Tours</div>
       </div>
 
+      <!-- Botón hamburguesa (rayas blancas) -->
       <button id="navToggle" class="hamburger" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
 
       <nav id="navMenu" aria-label="Secciones">
@@ -220,17 +288,23 @@
         </ul>
         <div class="socials" aria-label="Redes sociales">
           <a href="https://instagram.com/nomadastours_mx" target="_blank" rel="noopener" aria-label="Instagram @nomadastours_mx">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3a5 5 0 110 10 5 5 0 010-10zm0 2.2a2.8 2.8 0 100 5.6 2.8 2.8 0 000-5.6zm6.2-.9a1.1 1.1 0 110 2.2 1.1 1.1 0 010-2.2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7zm5 3a5 5 0 110 10 5 5 0 010-10zm0 2.2a2.8 2.8 0 100 5.6 2.8 2.8 0 000-5.6zm6.2-.9a1.1 1.1 0 110 2.2 1.1 1.1 0 010-2.2z"/>
+            </svg>
           </a>
           <a href="https://facebook.com/nomadastours_mx" target="_blank" rel="noopener" aria-label="Facebook @nomadastours_mx">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 9H16l.5-3h-3V4.5c0-.8.2-1.3 1.3-1.3H16V0h-2.2C11.7 0 10 1.6 10 4.4V6H7v3h3v12h3.5V9z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M13.5 9H16l.5-3h-3V4.5c0-.8.2-1.3 1.3-1.3H16V0h-2.2C11.7 0 10 1.6 10 4.4V6H7v3h3v12h3.5V9z"/>
+            </svg>
           </a>
         </div>
       </nav>
     </div>
   </header>
 
-  <!-- ===== Banner destacado (imagen desde Drive) ===== -->
+  <!-- =======================================================
+       Banner destacado (imagen desde Drive)
+  ======================================================== -->
   <section id="promoBanner" class="banner banner--hidden" role="region" aria-label="Promoción destacada">
     <button class="x" id="bannerClose" aria-label="Cerrar anuncio">Cerrar</button>
     <a id="bannerLink" class="banner-link" href="#destinos">
@@ -243,7 +317,9 @@
   </section>
 
   <main>
-    <!-- ===== Hero ===== -->
+    <!-- =====================================================
+         Hero
+    ====================================================== -->
     <section class="hero">
       <div class="container">
         <h1>Aventuras auténticas con <span style="background:linear-gradient(135deg,var(--brand),var(--brand-2)); -webkit-background-clip:text; background-clip:text; color:transparent;">Nomadas Tours</span></h1>
@@ -253,7 +329,9 @@
       <div class="ridge" aria-hidden="true"></div>
     </section>
 
-    <!-- ===== Destinos ===== -->
+    <!-- =====================================================
+         Destinos (botón reservar → WhatsApp)
+    ====================================================== -->
     <section id="destinos">
       <div class="container">
         <h2>Destinos</h2>
@@ -278,7 +356,9 @@
       </div>
     </section>
 
-    <!-- ===== Calendario ===== -->
+    <!-- =====================================================
+         Calendario (por defecto MODO MES)
+    ====================================================== -->
     <section id="calendario">
       <div class="container">
         <h2>Calendario</h2>
@@ -294,14 +374,16 @@
           id="calFrame"
           class="calendar-embed"
           title="Calendario de viajes Nomadas Tours"
-          src="https://calendar.google.com/calendar/embed?src=3aef757278e2553c10237567a64c6c8f16a750947e508b41d3a32e280591be58%40group.calendar.google.com&ctz=America%2FMerida&mode=AGENDA&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showDate=1&showNav=1"
+          src="https://calendar.google.com/calendar/embed?src=3aef757278e2553c10237567a64c6c8f16a750947e508b41d3a32e280591be58%40group.calendar.google.com&ctz=America%2FMerida&mode=MONTH&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showDate=1&showNav=1"
           frameborder="0"
           scrolling="no">
         </iframe>
       </div>
     </section>
 
-    <!-- ===== Tienda / Equipo de camping ===== -->
+    <!-- =====================================================
+         Tienda / Equipo de camping
+    ====================================================== -->
     <section id="tienda">
       <div class="container">
         <h2>Equipo de camping</h2>
@@ -311,7 +393,9 @@
       </div>
     </section>
 
-    <!-- ===== Información ===== -->
+    <!-- =====================================================
+         Información
+    ====================================================== -->
     <section id="info">
       <div class="container">
         <h2>Información</h2>
@@ -326,47 +410,56 @@
       </div>
     </section>
 
-    <!-- ===== NUEVO: Testimonios ===== -->
+    <!-- =====================================================
+         Testimonios (Carrusel)
+    ====================================================== -->
     <section id="testimonios" aria-label="Opiniones de viajeros">
       <div class="container">
         <h2>Testimonios</h2>
         <p class="sub">Lo que dicen quienes ya viajaron con nosotros.</p>
-        <div class="t-grid">
-          <article class="t-card">
-            <div class="t-head">
-              <img class="t-avatar" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=300&auto=format&fit=crop" alt="Avatar de Ana" loading="lazy">
-              <div>
-                <div class="t-name">Ana P.</div>
-                <div class="t-stars">★★★★★</div>
+
+        <div class="t-slider">
+          <button class="t-nav t-prev" aria-label="Anterior">‹</button>
+          <div class="t-track" id="tTrack">
+            <article class="t-card">
+              <div class="t-head">
+                <img class="t-avatar" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=300&auto=format&fit=crop" alt="Avatar de Ana" loading="lazy">
+                <div>
+                  <div class="t-name">Ana P.</div>
+                  <div class="t-stars">★★★★★</div>
+                </div>
               </div>
-            </div>
-            <p>La subida al Tacaná estuvo increíble. Buen equipo y súper organizados. ¡Repetiría sin dudar!</p>
-          </article>
-          <article class="t-card">
-            <div class="t-head">
-              <img class="t-avatar" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=300&auto=format&fit=crop" alt="Avatar de Luis" loading="lazy">
-              <div>
-                <div class="t-name">Luis G.</div>
-                <div class="t-stars">★★★★★</div>
+              <p>La subida al Tacaná estuvo increíble. Buen equipo y súper organizados. ¡Repetiría sin dudar!</p>
+            </article>
+            <article class="t-card">
+              <div class="t-head">
+                <img class="t-avatar" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?q=80&w=300&auto=format&fit=crop" alt="Avatar de Luis" loading="lazy">
+                <div>
+                  <div class="t-name">Luis G.</div>
+                  <div class="t-stars">★★★★★</div>
+                </div>
               </div>
-            </div>
-            <p>Excelente atención y guías locales. El kayak en el cañón fue lo máximo.</p>
-          </article>
-          <article class="t-card">
-            <div class="t-head">
-              <img class="t-avatar" src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=300&auto=format&fit=crop" alt="Avatar de Mar" loading="lazy">
-              <div>
-                <div class="t-name">Mar V.</div>
-                <div class="t-stars">★★★★★</div>
+              <p>Excelente atención y guías locales. El kayak en el cañón fue lo máximo.</p>
+            </article>
+            <article class="t-card">
+              <div class="t-head">
+                <img class="t-avatar" src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=300&auto=format&fit=crop" alt="Avatar de Mar" loading="lazy">
+                <div>
+                  <div class="t-name">Mar V.</div>
+                  <div class="t-stars">★★★★★</div>
+                </div>
               </div>
-            </div>
-            <p>Muy responsables con el entorno. Las cascadas y los miradores, ¡de película!</p>
-          </article>
+              <p>Muy responsables con el entorno. Las cascadas y los miradores, ¡de película!</p>
+            </article>
+          </div>
+          <button class="t-nav t-next" aria-label="Siguiente">›</button>
         </div>
       </div>
     </section>
 
-    <!-- ===== Contacto ===== -->
+    <!-- =====================================================
+         Contacto
+    ====================================================== -->
     <section id="contacto">
       <div class="container">
         <h2>Contacto</h2>
@@ -409,7 +502,9 @@
     </section>
   </main>
 
-  <!-- ===== Footer ===== -->
+  <!-- =======================================================
+       Footer
+  ======================================================== -->
   <footer>
     <div class="container">
       © <span id="y"></span> Nomadas Tours · Todos los derechos reservados
@@ -425,7 +520,9 @@
     </div>
   </footer>
 
-  <!-- ===== Modal reutilizable (destinos y productos) ===== -->
+  <!-- =======================================================
+       Modal reutilizable (destinos y productos)
+  ======================================================== -->
   <dialog id="dlg">
     <div class="dlg-head">
       <strong id="dlgTitle">Detalle</strong>
@@ -448,7 +545,9 @@
   </a>
 
   <script>
-    /* ===== DRIVE CONFIG (IDs) ===== */
+    /* =======================================================
+       DRIVE CONFIG (IDs)
+    ======================================================== */
     const DRIVE = {
       logo: "1So1MGQYQVnuFH4OyB1YgdPfhRn-BhI7D",
       banner: "1jQu3saJziLenX8pe8yTouPdXJFMgppll",
@@ -459,12 +558,12 @@
         chiflon: "1DPMQxqN172twnZD8kEyk2DXeDmSn_bO7",
         chichonal: "1l9iNFpuGVh23HOlEf1M_wx023RmQJloI"
       },
-      productos:{
-        chamarra:"", sandalia:"", lampara:"", casa:""
-      }
+      productos:{ chamarra:"", sandalia:"", lampara:"", casa:"" }
     };
 
-    /* ===== Utilidades de imagen responsiva (Drive) ===== */
+    /* =======================================================
+       Utilidades de imagen responsiva (Drive)
+    ======================================================== */
     function gdrive(id, size=1600){ return id ? `https://drive.google.com/thumbnail?id=${id}&sz=w${size}` : ""; }
     function gdriveSrcset(id){
       if(!id) return "";
@@ -472,7 +571,9 @@
       return w.map(s=>`https://drive.google.com/thumbnail?id=${id}&sz=w${s} ${s}w`).join(", ");
     }
 
-    /* ===== Datos: Destinos ===== */
+    /* =======================================================
+       Datos: Destinos
+    ======================================================== */
     const DESTINOS = [
       { id:"tacana-0726", titulo:"Volcán Tacaná", lugar:"Chiapas, MX", duracion:"2 días / 1 noche", precio:2490, etiquetas:["montaña","camping","amanecer"], fechas:["2025-08-23","2025-09-20"], imagen:DRIVE.fotos.tacana, descripcion:"Ascenso guiado con campamento en Papales y cumbre al amanecer. Incluye coordinador, equipo básico de campamento y seguro." },
       { id:"kayak", titulo:"Kayak en el Cañón", lugar:"Chicoasén, MX", duracion:"1 día", precio:799, etiquetas:["cañon","kayak","conservacion"], fechas:["2025-08-30","2025-10-04"], imagen:DRIVE.fotos.kayak, descripcion:"Kayak en el río Grijalva por las imponentes paredes del Cañón del Sumidero." },
@@ -481,7 +582,9 @@
       { id:"chichonal-hike", titulo:"Volcán Chichonal + Aguas Azufradas", lugar:"Chiapas, MX", duracion:"2 días / 1 noche", precio:1950, etiquetas:["volcan","senderismo","termales"], fechas:["2025-09-13","2025-10-18"], imagen:DRIVE.fotos.chichonal, descripcion:"Trekking al cráter del Chichonal. Nivel intermedio, vistas espectaculares." }
     ];
 
-    /* ===== Datos: Productos (tienda) ===== */
+    /* =======================================================
+       Datos: Productos (tienda)
+    ======================================================== */
     const PRODUCTS = [
       { id:"chamarra-pro", titulo:"Chamarra impermeable Pro", categoria:"Ropa", precio:1490, imagen:DRIVE.productos.chamarra || "https://images.unsplash.com/photo-1548883354-7622d5436c81?q=80&w=1600&auto=format&fit=crop", descripcion:"Resistente al agua y respirable. Ideal para alta montaña o lluvias intensas." },
       { id:"sandalia-trekking", titulo:"Sandalias de trekking", categoria:"Calzado", precio:690, imagen:DRIVE.productos.sandalia || "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1600&auto=format&fit=crop", descripcion:"Suela adherente y secado rápido para travesías acuáticas." },
@@ -489,12 +592,14 @@
       { id:"casa-2p", titulo:"Casa de campaña 2P Liviana", categoria:"Refugio", precio:2790, imagen:DRIVE.productos.casa || "https://images.unsplash.com/photo-1504280390368-3971ed4cb998?q=80&w=1600&auto=format&fit=crop", descripcion:"Doble techo, varillas de aluminio, 2.3 kg." }
     ];
 
-    /* ===== Helpers ===== */
+    /* =======================================================
+       Helpers
+    ======================================================== */
     const $ = sel => document.querySelector(sel);
     const grid = $("#grid"), empty = $("#empty");
     const q = $("#q"), tag = $("#tag"), sort = $("#sort");
-    const dlg = $("#dlg"), dlgClose=$("#dlgClose"), dlgTitle=$("#dlgTitle"), dlgImg=$("#dlgImg"), dlgMeta=$("#dlgMeta"), dlgDesc=$("#dlgDesc");
-    const WA_PHONE = "529613331461"; // ← Número de WhatsApp con clave país
+    const dlg = $("#dlg"), dlgTitle=$("#dlgTitle"), dlgImg=$("#dlgImg"), dlgMeta=$("#dlgMeta"), dlgDesc=$("#dlgDesc");
+    const WA_PHONE = "529613331461"; // Número de WhatsApp con clave país
 
     function formatMoney(n){ return new Intl.NumberFormat('es-MX',{maximumFractionDigits:0}).format(n)}
     function formatDate(s){ const dt=new Date(s+"T00:00:00"); return dt.toLocaleDateString('es-MX',{year:'numeric',month:'short',day:'numeric'}); }
@@ -507,13 +612,17 @@
       return (d*24*60)+(n*12*60);
     }
 
-    /* ===== Llenar etiquetas ===== */
+    /* =======================================================
+       Llenar etiquetas
+    ======================================================== */
     function fillTags(){
       const all=new Set(); DESTINOS.forEach(d=>d.etiquetas.forEach(e=>all.add(e)));
       [...all].sort().forEach(e=>{ const opt=document.createElement("option"); opt.value=e; opt.textContent=e.charAt(0).toUpperCase()+e.slice(1); tag.appendChild(opt); });
     }
 
-    /* ===== Render destinos (BOTONES → WhatsApp) ===== */
+    /* =======================================================
+       Render destinos (botón → WhatsApp)
+    ======================================================== */
     function render(){
       const term=(q.value||"").toLowerCase().trim();
       const filterTag=tag.value;
@@ -573,14 +682,17 @@
       }
     }
 
-    /* ===== Render productos (botón → WhatsApp y modal) ===== */
+    /* =======================================================
+       Render productos (botón → WhatsApp y modal)
+    ======================================================== */
     function renderProducts(){
       const wrap=$("#gridProducts"), empty=$("#emptyProducts"); if(!wrap) return;
       wrap.innerHTML=""; if(!PRODUCTS.length){ empty.hidden=false; return } empty.hidden=true;
 
       for(const p of PRODUCTS){
-        const src = p.imagen.startsWith("http") ? p.imagen : gdrive(p.imagen, 1200);
-        const srcset = p.imagen.startsWith("http") ? `${p.imagen} 1200w` : gdriveSrcset(p.imagen);
+        const isHttp = typeof p.imagen === "string" && p.imagen.startsWith("http");
+        const src = isHttp ? p.imagen : gdrive(p.imagen, 1200);
+        const srcset = isHttp ? `${p.imagen} 1200w` : gdriveSrcset(p.imagen);
         const waText = `Hola Nomadas Tours, me interesa el producto "${p.titulo}" (ID: ${p.id}). ¿Está disponible?`;
         const waLink = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(waText)}`;
 
@@ -608,7 +720,9 @@
       }
     }
 
-    /* ===== Eventos: detalle destinos ===== */
+    /* =======================================================
+       Eventos: detalle destinos (modal)
+    ======================================================== */
     document.addEventListener("click", (e)=>{
       const btn = e.target.closest("[data-action='detalle']"); if(!btn) return;
       const d = DESTINOS.find(x=>x.id===btn.getAttribute("data-id")); if(!d) return;
@@ -632,13 +746,16 @@
       if(typeof dlg.showModal==="function"){ dlg.showModal(); }
     });
 
-    /* ===== Eventos: detalle productos (mismo modal) ===== */
+    /* =======================================================
+       Eventos: detalle productos (modal)
+    ======================================================== */
     document.addEventListener("click", (e)=>{
       const btn = e.target.closest("[data-action='detalle-producto']"); if(!btn) return;
       const p = PRODUCTS.find(x=>x.id===btn.getAttribute("data-id")); if(!p) return;
 
       dlgTitle.textContent = p.titulo;
-      dlgImg.src = p.imagen.startsWith("http") ? p.imagen : gdrive(p.imagen, 1600);
+      const isHttp = typeof p.imagen === "string" && p.imagen.startsWith("http");
+      dlgImg.src = isHttp ? p.imagen : gdrive(p.imagen, 1600);
       dlgImg.alt = `${p.titulo} - ${p.categoria||"Equipo"}`;
       dlgMeta.textContent = `${p.categoria?`🧭 ${p.categoria} · `:""}💲 $${formatMoney(p.precio)} MXN`;
       dlgDesc.textContent = p.descripcion || "";
@@ -653,13 +770,16 @@
       if(typeof dlg.showModal==="function"){ dlg.showModal(); }
     });
 
-    /* ===== Cerrar modal ===== */
     document.getElementById("dlgClose").addEventListener("click", ()=> dlg.close());
 
-    /* ===== Inputs filtros ===== */
+    /* =======================================================
+       Inputs filtros
+    ======================================================== */
     [q, tag, sort].forEach(el=>el.addEventListener("input", render));
 
-    /* ===== Formulario (simulado) ===== */
+    /* =======================================================
+       Formulario (simulado)
+    ======================================================== */
     const form = $("#contactForm"), formStatus=$("#formStatus");
     form.addEventListener("submit",(e)=>{
       e.preventDefault();
@@ -676,7 +796,9 @@
       form.reset(); setTimeout(()=> formStatus.textContent="", 4000);
     });
 
-    /* ===== Banner: carga desde Drive y recordatorio de cierre ===== */
+    /* =======================================================
+       Banner: carga desde Drive y recordatorio de cierre
+    ======================================================== */
     (function(){
       const sect=$("#promoBanner"), img=$("#bannerImg"), link=$("#bannerLink"), btnX=$("#bannerClose");
       const kDismiss='banner-dismissed-at', sevenDays=7*24*60*60*1000, last=Number(localStorage.getItem(kDismiss)||0);
@@ -689,7 +811,9 @@
       btnX.addEventListener('click',(e)=>{ e.preventDefault(); localStorage.setItem(kDismiss,String(Date.now())); sect.classList.add('banner--hidden'); });
     })();
 
-    /* ===== Calendario: cambiar vista ===== */
+    /* =======================================================
+       Calendario: cambiar vista (Lista / Día / Mes)
+    ======================================================== */
     (function(){
       const CAL_ID="3aef757278e2553c10237567a64c6c8f16a750947e508b41d3a32e280591be58@group.calendar.google.com";
       const base="https://calendar.google.com/calendar/embed";
@@ -701,7 +825,9 @@
       });
     })();
 
-    /* ===== Menú hamburguesa (móvil) ===== */
+    /* =======================================================
+       Menú hamburguesa (móvil)
+    ======================================================== */
     (function(){
       const toggle=$("#navToggle"), nav=$("#navMenu");
       toggle.addEventListener("click", ()=>{
@@ -711,7 +837,22 @@
       nav.addEventListener("click",(e)=>{ if(e.target.tagName==="A") { nav.classList.remove("open"); toggle.setAttribute("aria-expanded","false"); } });
     })();
 
-    /* ===== Init ===== */
+    /* =======================================================
+       Carrusel testimonios: botones prev/next
+    ======================================================== */
+    (function(){
+      const track = document.getElementById('tTrack');
+      if(!track) return;
+      const prev = document.querySelector('.t-prev');
+      const next = document.querySelector('.t-next');
+      const step = () => track.clientWidth * 0.9; // avanza casi un viewport
+      prev.addEventListener('click', ()=> track.scrollBy({left:-step(), behavior:'smooth'}));
+      next.addEventListener('click', ()=> track.scrollBy({left: step(), behavior:'smooth'}));
+    })();
+
+    /* =======================================================
+       Init
+    ======================================================== */
     function fillLogo(){
       const logoUrl=gdrive(DRIVE.logo,512), logoImg=$("#logoImg"), logoBadge=$("#logoBadge");
       if(logoUrl){ logoImg.src=logoUrl; logoImg.style.display="block"; logoBadge.style.display="none"; }
